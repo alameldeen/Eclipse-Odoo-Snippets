@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="xml_tag" deleted="false" description="xml comment" enabled="true" id="org.eclipse.wst.xml.ui.internal.templates.comment" name="comment">&lt;!-- ${cursor} --&gt;</template><template autoinsert="true" context="xml_attribute" deleted="false" description="Default Namespace Attribute" enabled="true" id="org.eclipse.wst.xml.ui.internal.templates.defaultnsp" name="default namespace">xmlns="default namespace"</template><template autoinsert="true" context="xml_attribute" deleted="false" description="No Namespace Schema Location" enabled="true" id="org.eclipse.wst.xml.ui.internal.templates.noschemaLoc" name="noschemaLoc">xsi:noNamespaceSchemaLocation="{location}"</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Assets Link" enabled="true" name="o_asset_link">&lt;link rel="stylesheet" href="/${module_name}/static/src/css/${styles}.css" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Assets Script" enabled="true" name="o_asset_script">&lt;script type="text/javascript" src="/${module_name}/static/src/js/${scripts}.js" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Asset Template" enabled="true" name="o_asset_template">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;templates xml:space="preserve"&gt;
+    ${1}
+&lt;/templates&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Asset Template BackEnd" enabled="true" name="o_asset_template_backend">&lt;template id="assets_backend" name="${module_name} backend assets" inherit_id="web.assets_backend"&gt;
+    &lt;xpath expr="." position="inside"&gt;
+        &lt;link rel="stylesheet" href="/${module_name}/static/src/css/${style}.css"/&gt;
+        &lt;script type="text/javascript" src="/${module_name}/static/src/js/${script}.js"&gt;&lt;/script&gt;
+    &lt;/xpath&gt;
+&lt;/template&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Asset Template FrontEnd" enabled="true" name="o_asset_template_frontend">&lt;template id="assets_frontend" name="${module_name} frontend assets" inherit_id="website.assets_frontend"&gt;
+    &lt;xpath expr="." position="inside"&gt;
+        &lt;link rel="stylesheet" href="/${module_file}/static/src/css/${style}.css"/&gt;
+        &lt;script type="text/javascript" src="/${module_file}/static/src/js/${script}.js"&gt;&lt;/script&gt;
+    &lt;/xpath&gt;
+&lt;/template&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Attrs Invisible" enabled="true" name="o_attrs_invisible">attrs="{'invisible':[(${field},'=', ${condition})]}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Attrs ReadOnly" enabled="true" name="o_attrs_readonly">attrs="{'readonly':[(${field},'=', ${condition})]}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Attrs Ref" enabled="true" name="o_attrs_ref">ref('${external_id}') ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Attrs Required" enabled="true" name="o_attrs_required">attrs="{'required':[(${field},'=', ${condition})]}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Button Action" enabled="true" name="o_button_action">&lt;button type="action" name="%(${action_id})d" string="${Label}" default_focus="0" help="" confirm="${Message}" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Button Active" enabled="true" name="o_button_active">&lt;button type="object" name="toggle_active" class="oe_stat_button" icon="fa-archive"&gt;
+	&lt;!-- "Active" / "Deactive" button --&gt;
+    &lt;field name="active" widget="boolean_button" options="{'terminology': 'active'}" /&gt;
+    &lt;!-- "Not Archived" / "Archived" button --&gt;
+    &lt;field name="active" widget="boolean_button" options="{'terminology': 'archive'}" /&gt;
+&lt;/button&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Button Simple" enabled="true" name="o_button_simple">&lt;button string="${Label}" name="${python_function}" type="object" context="{}"  default_focus="0" help="" confirm="${Message}" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Button" enabled="true" name="o_button_smart">&lt;button class="oe_stat_button" type="object" name="${xml_id}" icon="fa-check"&gt;
+    &lt;div&gt;${Label}&lt;/div&gt;
+&lt;/button&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Button Special Cancel" enabled="true" name="o_button_special_cancel">&lt;button class="oe_link" special="cancel" string="${Cancel}"  default_focus="0" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo ColSpan" enabled="true" name="o_colspan">colspan="${colspan}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Div" enabled="true" name="o_div">&lt;div class="oe_title"&gt;
+    &lt;label for="${FieldName}" class="oe_edit_only" /&gt;
+    &lt;h1&gt;
+        &lt;field name="${FieldName}" class="oe_inline" /&gt;
+    &lt;/h1&gt;
+    &lt;label for="${FieldName2}" class="oe_edit_only" /&gt;
+    &lt;h2&gt;
+        &lt;field name="${FieldName2}" /&gt;
+    &lt;/h2&gt;
+&lt;/div&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Div Followers" enabled="true" name="o_div_followers">&lt;div class="oe_chatter"&gt;
+    &lt;field name="message_follower_ids" widget="mail_followers"/&gt;
+    &lt;field name="message_ids" widget="mail_thread"/&gt;
+&lt;/div&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Option Currency" enabled="true" name="o_option_currency">t-field-options="{'widget': 'monetary', 'display_currency': 'res_company.currency_id'}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Option Date" enabled="true" name="o_option_date">t-field-options="{'format': 'dd/MM/yyyy'}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Option Many2One" enabled="true" name="o_option_m2o">options="{'no_create': True, no_quick_create, no_create_edit 'no_open': True}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Option Monetary" enabled="true" name="o_option_monetary">widget="monetary" options="{'currency_field': ${currency}_id}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Option Tree" enabled="true" name="o_option_tree">create="1" delete="1" edit="1" editable="${5:top_bottom}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Option Widget" enabled="true" name="o_option_widget">widget="statusbar|progressbar|many2onebutton|handle" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Field Options" enabled="true" name="o_options">options="{'no_open': True, 'no_create': True}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Attribute Name" enabled="true" name="o_qweb_attr_name">t-att-${name}="${value}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb AttributeF" enabled="true" name="o_qweb_attrf">t-attf-${name}="${format_string}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Attributes" enabled="true" name="o_qweb_attrs">t-att="${dict_of_pair}" ${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Call Template" enabled="true" name="o_qweb_call_template">&lt;t t-call="${template}"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Container" enabled="true" name="o_qweb_container">&lt;t t-name="${module_model_name}"&gt;
+    &lt;t t-call="report.html_container"&gt;
+        &lt;t t-foreach="docs" t-as="o"&gt;
+            &lt;t t-call="report.external_layout"&gt;
+                &lt;div class="page"&gt;
+                    &lt;h2&gt;${ReportTitle}&lt;/h2&gt;
+                    &lt;p&gt;This object's name is &lt;span t-field="o.name"/&gt;&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/t&gt;
+        &lt;/t&gt;
+    &lt;/t&gt;
+&lt;/t&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Esc" enabled="true" name="o_qweb_esc">&lt;t t-esc="${value}" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Extend" enabled="true" name="o_qweb_extend">&lt;t t-extend="${base_template}"&gt;
+    &lt;t t-jquery="${ul}" t-operation="append/prepend/before/after/inner/replace"&gt;
+        ${code}
+    &lt;/t&gt;${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb External Layout" enabled="true" name="o_qweb_external_layout">&lt;t t-call="report.external_layout"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb External Layout Footer" enabled="true" name="o_qweb_external_layout_footer">&lt;t t-call="report.external_layout_footer"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb External Layout Header" enabled="true" name="o_qweb_external_layout_header">&lt;t t-call="report.external_layout_header"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Field" enabled="true" name="o_qweb_field">&lt;${span} t-field="${o}.${field_name}" /&gt;${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb ForEach" enabled="true" name="o_qweb_for_each">&lt;t t-foreach="${set}" t-as="${name}"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Full" enabled="true" name="o_qweb_full">&lt;!-- Report "${1}" document template --&gt;
+&lt;record id="view_${2}_document_qweb" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;${Title}&lt;/field&gt;
+    &lt;field name="model"&gt;${model}&lt;/field&gt;
+    &lt;field name="type"&gt;qweb&lt;/field&gt;
+    &lt;field name="mode"&gt;primary&lt;/field&gt;
+    &lt;field name="priority" eval="${priority}" /&gt;
+    &lt;field name="active" eval="${True}" /&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;t t-name="${3}.view_${2}_document_qweb"&gt;
+            &lt;t t-call="report.external_layout"&gt;
+                &lt;div class="page"&gt;
+                    &lt;h2&gt;Report title&lt;/h2&gt;
+                    &lt;p&gt;This object's name is &lt;span t-field="o.name"/&gt;&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/t&gt;
+        &lt;/t&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+
+&lt;!-- Report "${1}" translate_doc template --&gt;
+&lt;record id="view_${2}_qweb" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;${Title}&lt;/field&gt;
+    &lt;field name="model"&gt;${model}&lt;/field&gt;
+    &lt;field name="type"&gt;qweb&lt;/field&gt;
+    &lt;field name="mode"&gt;primary&lt;/field&gt;
+    &lt;field name="priority" eval="${priority}" /&gt;
+    &lt;field name="active" eval="${True}" /&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;t t-name="${3}.view_${2}_qweb"&gt;
+            &lt;t t-call="report.html_container"&gt;
+                &lt;t t-foreach="doc_ids" t-as="doc_id"&gt;
+                    &lt;t t-raw="translate_doc(doc_id, doc_model, '${4}', '${3}.view_${2}_document_qweb')"/&gt;
+                &lt;/t&gt;
+            &lt;/t&gt;
+        &lt;/t&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+
+&lt;!-- Report action to show: "${1}" --&gt;
+&lt;record id="action_report_${2}" model="ir.actions.report.xml"&gt;
+    &lt;field name="name"&gt;${Title}&lt;/field&gt;
+    &lt;field name="model"&gt;${model}&lt;/field&gt;
+    &lt;field name="report_type"&gt;qweb-pdf&lt;/field&gt;
+    &lt;field name="report_name"&gt;${report_name}_qweb&lt;/field&gt;
+    &lt;field name="attachment_use" eval="${attachments}" /&gt;
+    &lt;field name="attachment"&gt;(object.name+'.pdf')&lt;/field&gt;
+    &lt;field name="paperformat_id" ref="report.paperformat_euro" /&gt;
+    &lt;field name="help"&gt;${ToolTip}&lt;/field&gt;
+&lt;/record&gt;
+
+&lt;!-- Button to print the report: "${1}" --&gt;
+&lt;record id="${2}_values" model="ir.values"&gt;
+    &lt;field name="name"&gt;${Title}&lt;/field&gt;
+    &lt;field name="model_id" ref="${model_id}" /&gt;
+    &lt;field name="model"&gt;${model}&lt;/field&gt;
+    &lt;field name="value" eval="'ir.actions.report.xml,' +str(ref('action_report_${2}'))" /&gt;
+    &lt;field name="key"&gt;action&lt;/field&gt;
+    &lt;field name="key2"&gt;client_print_multi&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Html Container" enabled="true" name="o_qweb_html_container">&lt;t t-call="report.html_container"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb IF" enabled="true" name="o_qweb_if">&lt;t t-if="${codition}"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb IF inline" enabled="true" name="o_qweb_if_inline">&lt;${tag} t-if="${condition}"&gt;
+    ${value}
+&lt;/${tag}&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Internal Layout" enabled="true" name="o_qweb_internal_layout">&lt;t t-call="report.internal_layout"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb JS" enabled="true" name="o_qweb_js">&lt;t t-js="${name}"&gt;
+    console.log("Foo is", ctx.foo);
+&lt;/t&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Layout" enabled="true" name="o_qweb_layout">&lt;t t-call="report.layout"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Layout Style" enabled="true" name="o_qweb_layout_style">&lt;t t-call="report.style"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Log" enabled="true" name="o_qweb_log">&lt;t t-log="${value}"/&gt;${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Minimal Layout" enabled="true" name="o_qweb_minimal_layout">&lt;t t-call="report.minimal_layout"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Raw" enabled="true" name="o_qweb_raw">&lt;t t-raw="0" /&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Raw Translate Doc" enabled="true" name="o_qweb_raw_translate">&lt;t t-raw="translate_doc(${doc_id}, ${doc_model}, '${lang}', ${module_template})" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Self Call Template" enabled="true" name="o_qweb_self_call_template">&lt;t t-call="${template}" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Set" enabled="true" name="o_qweb_set">&lt;t t-set="${name}"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Set Inline" enabled="true" name="o_qweb_set_inline">&lt;t t-set="${name}" t-value="${value}" /&gt;${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Simple" enabled="true" name="o_qweb_simple">&lt;template id="report_${model_name}" name="${ReportName}"&gt;
+    &lt;t t-call="report.html_container"&gt;
+        &lt;t t-foreach="docs" t-as="o"&gt;
+            &lt;t t-call="report.external_layout"&gt;
+                &lt;div class="page"&gt;
+					${cursor}
+                &lt;/div&gt;
+            &lt;/t&gt;
+        &lt;/t&gt;
+    &lt;/t&gt;
+&lt;/template&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Simple Translate" enabled="true" name="o_qweb_simple_translate">&lt;template id="report_${model_name}_document" name="${ReportName}_document"&gt;
+    &lt;t t-call="report.external_layout"&gt;
+        &lt;div class="page"&gt;
+			${cursor}
+        &lt;/div&gt;
+    &lt;/t&gt;
+&lt;/template&gt;
+
+&lt;template id="report_${model_name}" name="${ReportName}"&gt;
+    &lt;t t-call="report.html_container"&gt;
+        &lt;t t-foreach="doc_ids" t-as="doc_id"&gt;
+            &lt;t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', '${module_name}.report_${model_name}_document')"/&gt;
+        &lt;/t&gt;
+    &lt;/t&gt;
+&lt;/template&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb T-Name" enabled="true" name="o_qweb_t_name">&lt;t t-name="${template_name}"&gt;
+    ${cursor}
+&lt;/t&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Qweb Template View" enabled="true" name="o_qweb_template_view">&lt;template id="report_${name}_document"&gt;
+    &lt;t t-call="report.external_layout"&gt;
+        &lt;t t-set="o" t-value="doc" /&gt;
+            &lt;div class="page"&gt;
+                &lt;div class="oe_structure" /&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-xs-5 col-xs-offset-7"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;h2&gt;
+                &lt;span t-field="o.name" /&gt;
+            &lt;/h2&gt;
+            &lt;div class="row mt32 mb32"&gt;
+                &lt;div class="col-xs-2" t-if="o.name"&gt;
+                    &lt;strong&gt;&lt;/strong&gt;
+                    &lt;p t-field="o.name" /&gt;
+                &lt;/div&gt;
+                &lt;div class="col-xs-2" t-if="o.${field}"&gt;
+                    &lt;strong&gt;&lt;/strong&gt;
+                    &lt;p t-field="o.${field}" /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;table class="table table-condensed"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;&lt;/th&gt;
+                        &lt;th class="text-right"&gt;&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody class="${module_name}_tbody"&gt;
+                    &lt;t t-foreach="o.${o2m}" t-as="d"&gt;
+                        &lt;tr t-if="d.name"&gt;
+                            &lt;td&gt;
+                                &lt;span t-field="d." /&gt;
+                            &lt;/td&gt;
+                            &lt;td class="text-right"&gt;
+                                &lt;span t-field="d." /&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/t&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+            &lt;div class="oe_structure" /&gt;
+            &lt;div class="footer"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/t&gt;
+&lt;/template&gt;
+
+&lt;template id="report_${name}"&gt;
+    &lt;t t-call="report.html_container"&gt;
+        &lt;t t-foreach="docs" t-as="doc"&gt;
+            &lt;t t-call="${module_name}.report_${name}_document" /&gt;
+        &lt;/t&gt;
+    &lt;/t&gt;
+&lt;/template&gt;
+&lt;report
+    id="report_${name}_print"
+    string="${Label}"
+    model="${module_name}"
+    report_type="qweb-pdf"
+    file="${module_name}.report_${name}"
+    name="${module_name}.report_${name}"
+/&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Act Window View" enabled="true" name="o_record_act_window_view">&lt;record id="action_view_${1:model_name}_tree" model="ir.actions.act_window.view"&gt;
+    &lt;field name="act_window_id" ref="action_${Model}" /&gt;
+    &lt;field name="view_mode"&gt;tree&lt;/field&gt;
+    &lt;field name="view_id" ref="view_${Model}_tree" /&gt;
+&lt;/record&gt;
+
+&lt;record model="ir.actions.act_window.view" id="action_view_${Model}_form"&gt;
+    &lt;field name="act_window_id" ref="action_${Model}" /&gt;
+    &lt;field name="view_mode"&gt;form&lt;/field&gt;
+    &lt;field name="view_id" ref="view_${Model}_form" /&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Action Client" enabled="true" name="o_record_action_client">&lt;record id="${model_name}_action" model="ir.actions.client"&gt;
+    &lt;field name="name"&gt;${Title}&lt;/field&gt;
+    &lt;field name="res_model"&gt;${model}&lt;/field&gt;
+    &lt;field name="tag"&gt;${model_name}_view&lt;/field&gt;
+    &lt;field name="context"&gt;{${context}}&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Action Rule" enabled="true" name="o_record_action_rule">&lt;record id="${1}" model="base.action.rule"&gt;
+    &lt;field name="name"&gt;${Description}&lt;/field&gt;
+    &lt;field name="active" eval="${True}" /&gt;
+    &lt;field name="sequence" eval="${0}" /&gt;
+    &lt;field name="server_action_ids" eval="[(4, ref('${ServerActionID}'))]" /&gt;
+    &lt;field name="model_id" ref="${Model}" /&gt;
+    &lt;field name="kind"&gt;${on_create_or_write}&lt;/field&gt;
+    &lt;field name="trg_date_id" ref="${fields}" /&gt;
+    &lt;field name="trg_date_range" eval="${0}" /&gt;
+    &lt;field name="trg_date_range_type"&gt;${day}&lt;/field&gt;
+    &lt;field name="trg_date_calendar_id" ref="${Calendar}" /&gt;
+    &lt;field name="filter_id" ref="${filters}" /&gt;
+    &lt;field name="filter_pre_id" ref="${filters}" /&gt;
+    &lt;field name="act_user_id" ref="${User}" /&gt;
+    &lt;field name="act_followers" eval="[(4, ref('${Partner}'))]" /&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Action Window" enabled="true" name="o_record_action_window">&lt;record id="action_${Model}_views" model="ir.actions.act_window"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="res_model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="view_mode"&gt;tree,form&lt;/field&gt;
+    &lt;field name="search_view_id" ref="${4}"/&gt;
+    &lt;field name="context"&gt;{${5}}&lt;/field&gt;
+    &lt;field name="domain"&gt;[${6}]&lt;/field&gt;
+    &lt;field name="groups_id" eval="[(7, ref(${Group}))]"/&gt;
+    &lt;field name="target"&gt;new|inline|current&lt;/field&gt;
+    &lt;field name="multi"&gt;${True}&lt;/field&gt;
+    &lt;field name="key2"&gt;${client_action_multi}&lt;/field&gt;
+    &lt;field name="help" type="html"&gt;
+        &lt;p class="oe_view_nocontent_create"&gt;
+            Click to Add an ${Label}
+        &lt;/p&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo record Action Window and MenuItem" enabled="true" name="o_record_action_window_menu">&lt;record id="action_${Model}_views" model="ir.actions.act_window"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="res_model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="view_mode"&gt;tree,form&lt;/field&gt;
+    &lt;field name="search_view_id" ref="${4}"/&gt;
+    &lt;field name="context"&gt;{${5}}&lt;/field&gt;
+    &lt;field name="domain"&gt;[${6}]&lt;/field&gt;
+    &lt;field name="groups_id" eval="[(4, ref(${Group}))]"/&gt;
+    &lt;field name="target"&gt;new|inline|current&lt;/field&gt;
+    &lt;field name="help" type="html"&gt;
+        &lt;p class="oe_view_nocontent_create"&gt;
+            Click to Add an ${Label}
+        &lt;/p&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+
+&lt;menuitem action="action_${Model}_views" id="${Model}_menu" parent="${ParentMenu}" sequence="${10}"  web_icon="${91:module},static/description/icon.png"/&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Assets" enabled="true" name="o_record_assets">&lt;record id="view_${1}_assets" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;${Module} Assets&lt;/field&gt;
+    &lt;field name="model"&gt;${Module}&lt;/field&gt;
+    &lt;field name="type"&gt;qweb&lt;/field&gt;
+    &lt;field name="mode"&gt;extension&lt;/field&gt;
+    &lt;field name="priority" eval="${16}" /&gt;
+    &lt;field name="active" eval="${True}" /&gt;
+    &lt;field name="inherit_id" ref="web.assets_backend" /&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;xpath expr="." position="inside"&gt;
+            &lt;link rel="stylesheet" href="/${module_file}/static/src/css/${styles}.css" /&gt;
+            &lt;script type="text/javascript" src="/${module_file}/static/src/js/${scripts}.js" /&gt;
+        &lt;/xpath&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Config Parameters" enabled="true" name="o_record_config_parameters">&lt;record id="${1}" model="ir.config_parameter"&gt;
+    &lt;field name="key"&gt;${char}&lt;/field&gt;
+    &lt;field name="value"&gt;${text}&lt;/field&gt;
+    &lt;field name="group_ids" eval="[(4, ref('${Groups}'))]" /&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Cron" enabled="true" name="o_record_cron_job">&lt;record id="ir_cron_${cron_name}" model="ir.cron" &gt;
+    &lt;field name="name"&gt;${Description}&lt;/field&gt;
+    &lt;field name="model"&gt;${model_name}&lt;/field&gt;
+    &lt;field name="function"&gt;${method_name}&lt;/field&gt;
+    &lt;field name="args"&gt;(${args})&lt;/field&gt;
+    &lt;field name="interval_number"&gt;${10}&lt;/field&gt;
+    &lt;field name="interval_type"&gt;minutes|hours|days|weeks|months&lt;/field&gt;
+    &lt;field name="user_id" ref="base.user_root" /&gt;
+    &lt;field name="active"&gt;1&lt;/field&gt;
+    &lt;field name="priority"&gt;1&lt;/field&gt;
+    &lt;field name="nextcall"&gt;2016-01-01 00:00:00&lt;/field&gt;
+    &lt;field name="numbercall"&gt;-1&lt;/field&gt;
+    &lt;field name="doall" eval="False" /&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Email Template" enabled="true" name="o_record_email_template">&lt;record id="email_${template_name}_template" model="email.template"&gt;
+    &lt;field name="name"&gt;${Title}&lt;/field&gt;
+    &lt;field name="subject"&gt;${Subject}&lt;/field&gt;
+    &lt;field name="email_from"&gt;(object.company_id.email or user.email)|safe&lt;/field&gt;
+    &lt;field name="email_to"&gt;object_name|safe&lt;/field&gt;
+    &lt;field name="email_cc"&gt;${cc}&lt;/field&gt;
+    &lt;field name="reply_to"&gt;${to}&lt;/field&gt;
+    &lt;field name="user_signature" eval="False" /&gt;
+    &lt;field name="lang"&gt;${object_lang}&lt;/field&gt;
+    &lt;field name="auto_delete" eval="${True}" /&gt;
+    &lt;field name="model_id" ref="${model_name}" /&gt;
+    &lt;field name="attachment_ids" eval="[(4, ref('${attachment}'))]" /&gt;
+    &lt;field name="body_html"&gt;
+        &lt;![CDATA[
+        &lt;p&gt;To whom it may concern:&lt;/p&gt;
+        ]]&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Filter" enabled="true" name="o_record_filter">&lt;record id="filter_${name}" model="ir.filters"&gt;
+    &lt;field name="name"&gt;${Title}&lt;/field&gt;
+    &lt;field name="model_id"&gt;${model_name}&lt;/field&gt;
+    &lt;field name="user_id" eval="${False}"/&gt;
+    &lt;field name="domain"&gt;[${domain}]&lt;/field&gt;
+    &lt;field name="context"&gt;{${context}}&lt;/field&gt;
+    &lt;field name="is_default" eval="${False}" /&gt;
+    &lt;field name="action_id" ref="" /&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Group" enabled="true" name="o_record_group">&lt;record id="${1}" model="res.groups"&gt;
+    &lt;field name="name"&gt;${2}&lt;/field&gt;
+    &lt;field name="category_id" ref="${3}"/&gt;
+    &lt;field name="implied_ids" eval="[(4, ref(${4}))]"/&gt;
+    &lt;field name="users" eval="[(5, ref('${51:base.user_root}'))]"/&gt;
+    &lt;field name="comment"&gt;${Comment}&lt;/field&gt;
+    &lt;field name="color"&gt;${Color}"&lt;/field&gt;
+    &lt;field name="is_portal" eval="${True}"/&gt;
+    &lt;field name="share" eval="${True}"/&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Group Category" enabled="true" name="o_record_group_category">&lt;record id="${1}" model="ir.module.category"&gt;
+    &lt;field name="name"&gt;${2}&lt;/field&gt;
+    &lt;field name="description"&gt;${Description}&lt;/field&gt;
+    &lt;field name="visible" eval="${True}"/&gt;
+    &lt;field name="sequence"&gt;${10}&lt;/field&gt;
+    &lt;field name="parent_id" ref="${ParentCategory}" /&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record MenuItem" enabled="true" name="o_record_menu_item">&lt;record id="menu_${menu}" model="ir.ui.menu" &gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="sequence" eval="${10}" /&gt;
+    &lt;field name="action" ref="action_${action}_act_window" /&gt;
+    &lt;field name="parent_id" ref="${parent_id}" /&gt;
+    &lt;field name="parent_left"&gt;&lt;/field&gt;
+    &lt;field name="parent_right"&gt;&lt;/field&gt;
+    &lt;field name="web_icon_data"&gt;&lt;/field&gt;
+    &lt;field name="web_icon_hover"&gt;&lt;/field&gt;
+    &lt;field name="web_icon_hover_data"&gt;&lt;/field&gt;
+    &lt;field name="icon"&gt;&lt;/field&gt;
+    &lt;field name="needaction_enabled"&gt;&lt;/field&gt;
+    &lt;field name="web_icon"&gt;&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Model" enabled="true" name="o_record_model">&lt;record id="${ID}" model="ir.model"&gt;
+    &lt;field name="model"&gt;${model_name}&lt;/field&gt;
+    &lt;field name="name"&gt;${Title}&lt;/field&gt;
+    &lt;field name="state"&gt;Base | Manual&lt;/field&gt;
+    &lt;field name="info"&gt;${4:Description}&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Model Access" enabled="true" name="o_record_model_access">&lt;record id="access_${model_access}" model="ir.model.access"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="model_id" ref="${model_name}"/&gt;
+    &lt;field name="group_id" ref="${groups}"/&gt;
+    &lt;field name="perm_read" eval="${True}" /&gt;
+    &lt;field name="perm_create" eval="${True}" /&gt;
+    &lt;field name="perm_write" eval="${True}" /&gt;
+    &lt;field name="perm_unlink" eval="${True}" /&gt;
+    &lt;field name="active" eval="${True}" /&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Model Data" enabled="true" name="o_record_model_data">&lt;record id="${3}" model="ir.model.data"&gt;
+    &lt;field name="name"&gt;${resource_external_id}&lt;/field&gt;
+    &lt;field name="model"&gt;${model_name}&lt;/field&gt;
+    &lt;field name="module"&gt;${module_name}&lt;/field&gt;
+    &lt;field name="date_init" eval="time.strftime('%Y-%m-%d %H:%M:%S')" /&gt;
+    &lt;field name="date_update" eval="time.strftime('%Y-%m-%d %H:%M:%S')" /&gt;
+    &lt;field name="res_id" eval="${1}" /&gt;
+    &lt;field name="noupdate" eval="${True}" /&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record PaperFormat" enabled="true" name="o_record_paperformat">&lt;record id="paperformat_${1}" model="report.paperformat" &gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="format"&gt;${A4}&lt;/field&gt;
+    &lt;field name="orientation"&gt;${Portrait}&lt;/field&gt;
+    &lt;field name="default" eval="${False}" /&gt;
+    &lt;field name="dpi" eval="${90}" /&gt;
+    &lt;field name="margin_top" eval="${40}" /&gt;
+    &lt;field name="margin_right" eval="${7}" /&gt;
+    &lt;field name="margin_bottom" eval="${20}" /&gt;
+    &lt;field name="margin_left" eval="${7}" /&gt;
+    &lt;field name="header_line" eval="${False}" /&gt;
+    &lt;field name="header_spacing" eval="${35}" /&gt;
+    &lt;field name="page_width" eval="${210}" /&gt;
+    &lt;field name="page_height" eval="${297}" /&gt;
+    &lt;field name="report_ids" eval="[(4, ref('${16:ir.actions.report.xml}'))]" /&gt;
+&lt;/record&gt;
+&lt;!--
+    ('A0', 'A0  5   841 x 1189 mm'),
+    ('A1', 'A1  6   594 x 841 mm'),
+    ('A2', 'A2  7   420 x 594 mm'),
+    ('A3', 'A3  8   297 x 420 mm'),
+    ('A4', 'A4  0   210 x 297 mm, 8.26 x 11.69 inches'),
+    ('A5', 'A5  9   148 x 210 mm'),
+    ('A6', 'A6  10  105 x 148 mm'),
+    ('A7', 'A7  11  74 x 105 mm'),
+    ('A8', 'A8  12  52 x 74 mm'),
+    ('A9', 'A9  13  37 x 52 mm'),
+    ('B0', 'B0  14  1000 x 1414 mm'),
+    ('B1', 'B1  15  707 x 1000 mm'),
+    ('B2', 'B2  17  500 x 707 mm'),
+    ('B3', 'B3  18  353 x 500 mm'),
+    ('B4', 'B4  19  250 x 353 mm'),
+    ('B5', 'B5  1   176 x 250 mm, 6.93 x 9.84 inches'),
+    ('B6', 'B6  20  125 x 176 mm'),
+    ('B7', 'B7  21  88 x 125 mm'),
+    ('B8', 'B8  22  62 x 88 mm'),
+    ('B9', 'B9  23  33 x 62 mm'),
+    ('B10', ':B10    16  31 x 44 mm'),
+    ('C5E', 'C5E 24  163 x 229 mm'),
+    ('Comm10E', 'Comm10E 25  105 x 241 mm, U.S. '
+     'Common 10 Envelope'),
+    ('DLE', 'DLE 26 110 x 220 mm'),
+    ('Executive', 'Executive 4   7.5 x 10 inches, '
+     '190.5 x 254 mm'),
+    ('Folio', 'Folio 27  210 x 330 mm'),
+    ('Ledger', 'Ledger  28  431.8 x 279.4 mm'),
+    ('Legal', 'Legal    3   8.5 x 14 inches, '
+     '215.9 x 355.6 mm'),
+    ('Letter', 'Letter 2 8.5 x 11 inches, '
+     '215.9 x 279.4 mm'),
+    ('Tabloid', 'Tabloid 29 279.4 x 431.8 mm'),
+    ('custom', 'Custom')
+--&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Product Product" enabled="true" name="o_record_product_product">&lt;record id="${Product}_product_product" model="product.product"&gt;
+    &lt;field name="name"&gt;${Title}&lt;/field&gt;
+    &lt;field name="description"&gt;${Description}&lt;/field&gt;
+    &lt;field name="description_purchase"&gt;${PurchaseDescription}&lt;/field&gt;
+    &lt;field name="description_sale"&gt;${SaleDescription}}&lt;/field&gt;
+    &lt;field name="categ_id" ref="${product_category}"/&gt;
+    &lt;field name="standard_price"&gt;${0}&lt;/field&gt;
+    &lt;field name="list_price"&gt;${0}&lt;/field&gt;
+    &lt;field name="type"&gt;${service}&lt;/field&gt;
+    &lt;field name="uom_id" ref="${uom}"/&gt;
+    &lt;field name="uom_po_id" ref="${uom}"/&gt;
+    &lt;field name="taxes_id" eval="[(4, ref('${tax}'))]" /&gt;
+    &lt;field name="image" type="base64" file="module_name/static/img/file_name.png"/&gt;
+    &lt;field name="default_code"&gt;${ProductCode}&lt;/field&gt;
+    &lt;field name="ean13"&gt;${0000000000000}&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Product Template" enabled="true" name="o_record_product_template">&lt;record id="${Product}_product_template}" model="product.template"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="description"&gt;${Description}&lt;/field&gt;
+    &lt;field name="description_purchase"&gt;${PurchaseDescription}&lt;/field&gt;
+    &lt;field name="description_sale"&gt;${SaleDescription}&lt;/field&gt;
+    &lt;field name="categ_id" ref="${product_category}"/&gt;
+    &lt;field name="standard_price"&gt;${0}&lt;/field&gt;
+    &lt;field name="list_price"&gt;${0}&lt;/field&gt;
+    &lt;field name="type"&gt;${service}&lt;/field&gt;
+    &lt;field name="uom_id" ref="${uom}"/&gt;
+    &lt;field name="uom_po_id" ref="${uom}"/&gt;
+    &lt;field name="taxes_id" eval="[(4, ref('${tax}'))]" /&gt;
+    &lt;field name="image" type="base64" file="module_name/static/img/file_name.png"/&gt;
+    &lt;field name="default_code"&gt;${ProductCode}&lt;/field&gt;
+    &lt;field name="ean13"&gt;${0000000000000}&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Report" enabled="true" name="o_record_report">&lt;record id="action_${1}_report" model="ir.actions.report.xml"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="report_type"&gt;qweb-pdf&lt;/field&gt;
+    &lt;field name="report_name"&gt;${out_filename}&lt;/field&gt;
+    &lt;field name="attachment_use" eval="${True}" /&gt;
+    &lt;field name="attachment"&gt;${attachment}&lt;/field&gt;
+    &lt;field name="paperformat_id" ref="report.paperformat_euro" /&gt;
+    &lt;field name="help"&gt;${ToolTip}&lt;/field&gt;}
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Rule" enabled="true" name="o_record_rule">&lt;record id="${1}_rule" model="ir.rule"&gt;
+    &lt;field name="name"&gt;${2}&lt;/field&gt;
+    &lt;field name="model_id" ref="${model_xml_id}"/&gt;
+    &lt;field name="global" eval="${True}" /&gt;
+    &lt;field name="perm_read" eval="${True}" /&gt;
+    &lt;field name="perm_create" eval="${True}" /&gt;
+    &lt;field name="perm_write" eval="${True}" /&gt;
+    &lt;field name="perm_unlink" eval="${True}" /&gt;
+    &lt;field name="domain_force"&gt;['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]&lt;/field&gt;
+    &lt;field name="active" eval="${True}" /&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Sequence" enabled="true" name="o_record_sequence">&lt;record id="sequence_${seq_name}" model="ir.sequence"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="code"&gt;${Code}&lt;/field&gt;
+    &lt;field name="prefix"&gt;${20}&lt;/field&gt;
+    &lt;field name="suffix"&gt;${31}&lt;/field&gt;
+    &lt;field name="padding"&gt;${5}&lt;/field&gt;
+    &lt;field name="number_next"&gt;${1}&lt;/field&gt;
+    &lt;field name="number_increment"&gt;${1}&lt;/field&gt;
+    &lt;field name="company_id" eval="${False}"/&gt;
+    &lt;field name="use_date_range" eval="${True}"/&gt;
+    &lt;field name="implementation"&gt;no_gap&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Sequence Type" enabled="true" name="o_record_sequence_type">&lt;record id="ir_sequence_type_${model_name}" model="ir.sequence.type"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="code"&gt;${model_name}&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Server Action" enabled="true" name="o_record_server_action">&lt;record id="${Class}_action" model="ir.actions.server"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="model_id" ref="model_${model_name}"/&gt;
+    &lt;field name="context"&gt;{${context}}&lt;/field&gt;
+    &lt;field name="action_id" ref="action_id" /&gt;
+    &lt;field name="condition" eval="${True}" /&gt;
+    &lt;field name="child_ids" eval="[(6, ref('${server_action_ids}'))]" /&gt;
+    &lt;field name="code"&gt;
+    if object.some_condition():
+        action = {
+            "type": "ir.actions.act_window",
+            "view_mode": "form",
+            "res_model": object._name,
+            "res_id": object.id,
+        }
+        else:
+            raise Warning(object.name)
+
+       # Evaluation context:
+        self: the model object linked to the action via `model_id`
+        object, obj: only available if `active_model` and `active_id` are provided (via context) otherwise `None`. The actual record selected by `active_id`
+        pool: the current database registry
+        datetime, dateutil, time: corresponding Python modules
+        cr: the current cursor
+        user: the current user record
+        context: execution context
+        Warning: constructor for the `Warning` exception}
+
+        ## hr_expense addon example:
+        if context.get('active_model') == 'hr.expense' and context.get('active_ids'):
+            action = env['hr.expense'].browse(context['active_ids']).submit_expenses()
+    &lt;/field&gt;}
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Simple" enabled="true" name="o_record_simple">&lt;record id="${RecordID}" model="${Class}"&gt;
+    &lt;field name="${FieldName}"&gt;${Data}&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record ToDo Action" enabled="true" name="o_record_todo_action">&lt;record id="action_todo_${1}" model="ir.actions.todo"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="type"&gt;${manual}&lt;/field&gt;
+    &lt;field name="state"&gt;${open}&lt;/field&gt;
+    &lt;field name="sequence" eval="${10}" /&gt;
+    &lt;field name="action_id" ref="${action_id}" /&gt;
+    &lt;field name="note"&gt;${Note}&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Values" enabled="true" name="o_record_values">&lt;record id="${1}_values" model="ir.values"&gt;
+    &lt;field name="name"&gt;${2}&lt;/field&gt;
+    &lt;field name="model_id" ref="${model_id}" /&gt;
+    &lt;field name="model"&gt;${class}&lt;/field&gt;
+    &lt;field name="value" eval="'ir.actions.act_window,' +str(ref('${3:action_external_id}'))" /&gt;
+    &lt;field name="key"&gt;${action}&lt;/field&gt;
+    &lt;field name="key2"&gt;${client_action_multi}&lt;/field&gt;
+    &lt;field name="action_id" ref="${action_id}" /&gt;
+    &lt;field name="res_id" eval="${1}" /&gt;
+    &lt;field name="company_id" ref="${company_id}" /&gt;
+    &lt;field name="user_id" ref="${users}" /&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Action" enabled="true" name="o_record_view_action">&lt;record id="${Model}_action_view_form/tree/search/calendar/graph/pivot/kanban" model="ir.actions.act_window.view"&gt;
+    &lt;field name="act_window_id" ref="action_${Class}_views"/&gt;
+    &lt;field name="view_mode"&gt;tree/kanban/form/calendar/pivot/graph&lt;/field&gt;
+    &lt;field name="view_id" ref="view_${Class}_tree/kanban/form/calendar/pivot/graph"/&gt;
+    &lt;field name="sequence" eval="${0}"/&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Calendar" enabled="true" name="o_record_view_calendar">&lt;record id="view_${Model}_calendar" model="ir.ui.view"&gt;
+   &lt;field name="name"&gt;view.${Class}.calendar&lt;/field&gt;
+   &lt;field name="model"&gt;${Class}&lt;/field&gt;
+   &lt;field name="type"&gt;calendar&lt;/field&gt;
+   &lt;field name="arch" type="xml"&gt;
+       &lt;calendar string="${Label}" date_start="${field_date}" color="${color_field}" event_open_popup="True" quick_add="True"&gt;
+           &lt;field name="${field_to_show}" /&gt;
+       &lt;/calendar&gt;
+   &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Form" enabled="true" name="o_record_view_form">&lt;record id="view_${Class}_form" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Model}.form&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;form string="${String}"&gt;
+            &lt;header&gt;
+                &lt;button string="${Label}" type="workflow|object|action" name="signal|method|action_id" states="${state}" class="oe_highlight"/&gt;
+                &lt;field name="states" widget="statusbar" statusbar_visible="${states}" statusbar_colors="{'KEY_IS_STATE':'VALUE_IS_COLOR'}"/&gt;
+            &lt;/header&gt;
+            &lt;sheet&gt;
+                &lt;group name="${4}" string="${5}"&gt;
+                   &lt;field name="${field_name}"/&gt;
+               &lt;/group&gt;
+           &lt;/sheet&gt;
+            &lt;footer&gt;&lt;/footer&gt;
+       &lt;/form&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Form Inherit" enabled="true" name="o_record_view_form_inherit">&lt;record id="view_${Model}_form_inherit" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Class}.form.inherit&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="inherit_id" ref="${ViewID}"/&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;field name="${field_name}" position="after:before:attributes:replace"&gt;
+        &lt;/field&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Full" enabled="true" name="o_record_view_full">&lt;record id="view_${Model}_form" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Class}.form&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;form string="${Label}"&gt;
+            &lt;header&gt;
+                &lt;button string="${Label2}" type="workflow|object|action" name="signal|method|action-id" states="${state}" class="oe_highlight"}/&gt;
+                &lt;field name="${states}" widget="statusbar" statusbar_visible="${states}" statusbar_colors="{'KEY_IS_STATE':'VALUE_IS_COLOR'}"/&gt;
+            &lt;/header&gt;
+            &lt;sheet&gt;
+                &lt;group&gt;
+                   &lt;field name="${FieldName}"/&gt;
+               &lt;/group&gt;
+           &lt;/sheet&gt;
+            &lt;footer&gt;&lt;/footer&gt;
+       &lt;/form&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+
+&lt;record id="view_${Model}_tree" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Class}.tree&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;tree string="${Label}"&gt;
+            &lt;field name="${FieldName}"/&gt;
+       &lt;/tree&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+
+&lt;record id="view_${Model}_search" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Class}.search&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;search string="${Label}"&gt;
+            &lt;field name="${FieldName}"/&gt;
+       &lt;/search&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+
+&lt;record id="action_${Model}_views" model="ir.actions.act_window"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="res_model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="view_mode"&gt;tree,form&lt;/field&gt;
+    &lt;field name="search_view_id" ref="view_${Class}_search"/&gt;
+    &lt;field name="context"&gt;{${context}}&lt;/field&gt;
+    &lt;field name="domain"&gt;[${domain}]&lt;/field&gt;
+    &lt;field name="groups_id" eval="[(7, ref(${group}))]"/&gt;
+    &lt;field name="target"&gt;new|inline|current&lt;/field&gt;
+    &lt;field name="multi"&gt;${True}&lt;/field&gt;
+    &lt;field name="key2"&gt;${client_action_multi}&lt;/field&gt;
+    &lt;field name="help" type="html"&gt;
+        &lt;p class="oe_view_nocontent_create"&gt;
+            Click To Add an ${Label}
+        &lt;/p&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+
+&lt;record model="ir.actions.act_window.view" id="action_view_${Model}_tree"&gt;
+    &lt;field name="act_window_id" ref="action_${Model}" /&gt;
+    &lt;field name="view_mode"&gt;tree&lt;/field&gt;
+    &lt;field name="view_id" ref="view_${Model}_tree" /&gt;
+&lt;/record&gt;
+
+&lt;record model="ir.actions.act_window.view" id="action_view_${Model}_form"&gt;
+    &lt;field name="act_window_id" ref="action_${Model}" /&gt;
+    &lt;field name="view_mode"&gt;form&lt;/field&gt;
+    &lt;field name="view_id" ref="view_${Model}_form" /&gt;
+&lt;/record&gt;
+
+&lt;menuitem id="${7}" name="${8}" parent="${9}" action="action_${Model}_views" sequence=${10} groups="${11}" web_icon="${13:module},static/description/icon.png"/&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Graph" enabled="true" name="o_record_view_graph">&lt;record id="view_${Model}_graph" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Class}.graph&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;graph string="${Label}" stacked="True" type="one/bar/pie/line/pivot"&gt;
+            &lt;field type="${row}" name="${row_m2o_field}" /&gt;
+            &lt;field type="/row/col/g" name="${datefield}" interval="month" /&gt;
+            &lt;field type="measure" name="${numericfield}" /&gt;
+        &lt;/graph&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Kanban" enabled="true" name="o_record_view_kanban">&lt;record id="view_${Model}_kanban" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Class}.kanban&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;kanban class="o_res_partner_kanban"&gt;
+            &lt;field name="${FieldName}" /&gt;
+            &lt;field name="${ImageFieldName}" /&gt;
+            &lt;field name="${FieldName}" /&gt;
+            &lt;field name="${FieldName}" /&gt;
+            &lt;templates&gt;
+                &lt;t t-name="kanban-box"&gt;
+                    &lt;div class="oe_kanban_global_click o_res_partner_kanban"&gt;
+                        &lt;div class="o_kanban_tags_section" &gt;
+                            &lt;div class="o_kanban_image"&gt;
+                                &lt;t t-if="record.image.value"&gt;
+                                    &lt;img t-att-src="kanban_image("${ImageSource}", 'image_small', record.id.value)" /&gt;
+                                &lt;/t&gt;
+                            &lt;/div&gt;
+                            &lt;div class="oe_kanban_details"&gt;
+                                &lt;strong class="oe_partner_heading"&gt;&lt;field name="${FieldName}" /&gt;&lt;/strong&gt;
+                                &lt;ul&gt;
+                                    &lt;li t-if="record.${field}.raw_value" class="o_text_overflow"&gt;&lt;field name="${FieldName}" /&gt;&lt;/li&gt;
+                                    &lt;li t-if="record.${field}.raw_value" class="o_text_overflow"&gt;&lt;field name="${FieldName}" /&gt;&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/t&gt;
+            &lt;/templates&gt;
+        &lt;/kanban&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Kanban Card" enabled="true" name="o_record_view_kanban_card">&lt;record id="view_${Model}_kanban" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;${Class}.kanban&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="type"&gt;kanban&lt;/field&gt;
+    &lt;field name="priority"&gt;0&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;kanban default_group_by="${state}"&gt;
+            &lt;!-- Field declarations --&gt;
+            &lt;templates&gt;
+                &lt;t t-name="kanban-box"&gt;
+                    &lt;div class="oe_kanban_card"&gt;
+                        &lt;div class="oe_dropdown_kanban oe_dropdown_toggle"&gt;
+                            &lt;ul class="oe_dropdown_menu"&gt;
+                                &lt;li&gt;&lt;a type="edit"&gt;Edit&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a type="delete"&gt;Delete&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                        &lt;div class="oe_kanban_content"&gt;
+                            &lt;!-- Content fields go here --&gt;
+                            &lt;div class="oe_kanban_bottom_right"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="oe_kanban_footer_left"&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/t&gt;
+            &lt;/templates&gt;
+        &lt;/kanban&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Kanban Card Color" enabled="true" name="o_record_view_kanban_card_color">&lt;record id="view_${Model}_kanban" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;${Class}.kanban&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="type"&gt;kanban&lt;/field&gt;
+    &lt;field name="priority"&gt;0&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;kanban default_group_by="${state}"&gt;
+            &lt;!-- Field declarations --&gt;
+            &lt;field name="color" /&gt;
+            &lt;templates&gt;
+                &lt;t t-name="kanban-box"&gt;
+                    &lt;div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_card"&gt;
+                        &lt;div class="o_dropdown_kanban dropdown"&gt;
+                            &lt;a class="dropdown-toggle btn" data-toggle="dropdown" href="#"&gt;
+                                &lt;span class="fa fa-bars fa-lg"/&gt;
+                            &lt;/a&gt;
+                            &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+                                &lt;t t-if="widget.editable"&gt;&lt;li&gt;&lt;a type="edit"&gt;Edit&lt;/a&gt;&lt;/li&gt;&lt;/t&gt;
+                                &lt;t t-if="widget.deletable"&gt;&lt;li&gt;&lt;a type="delete"&gt;Delete&lt;/a&gt;&lt;/li&gt;&lt;/t&gt;
+                                &lt;li&gt;&lt;ul class="oe_kanban_colorpicker" data-field="color"/&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                        &lt;div class="oe_kanban_content"&gt;
+                            &lt;!-- Content fields go here --&gt;
+                            &lt;div class="oe_kanban_bottom_right"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="oe_kanban_footer_left"&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/t&gt;
+            &lt;/templates&gt;
+        &lt;/kanban&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Kanban DashBoard" enabled="true" name="o_record_view_kanban_dashboard">&lt;record id="view_${Model}_kanban" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;${Class}.kanban&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="type"&gt;kanban&lt;/field&gt;
+    &lt;field name="priority"&gt;0&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;kanban class="o_kanban_dashboard"&gt;
+            &lt;!-- Field declarations --&gt;
+            &lt;templates&gt;
+                &lt;t t-name="kanban-box"&gt;
+                    &lt;div&gt;
+                        &lt;div class="o_kanban_card_header"&gt;
+                            &lt;div class="o_kanban_card_header_title"&gt;
+                                &lt;div class="o_primary"&gt;
+                                    &lt;field name="name" /&gt;
+                                &lt;/div&gt;
+                                &lt;div class="o_secondary"&gt;
+                                    &lt;field name="create_uid" /&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="o_kanban_manage_button_section"&gt;
+                                &lt;a class="o_kanban_manage_toggle_button" href="#"&gt;More &lt;i class="fa fa-caret-down"/&gt;&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="container o_kanban_card_content o_visible"&gt;
+                            &lt;div class="row"&gt;
+                                &lt;div class="col-xs-6 o_kanban_primary_left"&gt;
+                                    &lt;!-- Left content --&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-6 o_kanban_primary_right"&gt;
+                                    &lt;!-- Right content --&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-12 o_kanban_primary_bottom"&gt;
+                                    &lt;!-- Bottom content --&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="container o_kanban_card_manage_pane o_invisible"&gt;
+                            &lt;!-- Only shows when more is clicked --&gt;
+                            &lt;div class="row"&gt;
+                                &lt;div class="col-xs-4 o_kanban_card_manage_section"&gt;
+                                    &lt;div class="o_kanban_card_manage_title"&gt;Section 1&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-4 o_kanban_card_manage_section"&gt;
+                                    &lt;div class="o_kanban_card_manage_title"&gt;Section 2&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-4 o_kanban_card_manage_section"&gt;
+                                    &lt;div class="o_kanban_card_manage_title"&gt;Section 3&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="row o_kanban_card_settings"&gt;
+                                &lt;div class="col-xs-8"&gt;
+                                    &lt;!-- Footer --&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-4 text-right"&gt;
+                                    &lt;a type="edit"&gt;Settings&lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/t&gt;
+            &lt;/templates&gt;
+        &lt;/kanban&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View kanban DashBoard Color" enabled="true" name="o_record_view_kanban_dashboard_color">&lt;record id="view_${Model}_kanban" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;${Class}.kanban&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="type"&gt;kanban&lt;/field&gt;
+    &lt;field name="priority"&gt;0&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;kanban class="o_kanban_dashboard"&gt;
+            &lt;!-- Field declarations --&gt;
+            &lt;field name="color" /&gt;
+            &lt;templates&gt;
+                &lt;t t-name="kanban-box"&gt;
+                    &lt;div t-attf-class="#{kanban_color(record.color.raw_value)}"&gt;
+                        &lt;div class="o_kanban_card_header"&gt;
+                            &lt;div class="o_kanban_card_header_title"&gt;
+                                &lt;div class="o_primary"&gt;
+                                    &lt;field name="name" /&gt;
+                                &lt;/div&gt;
+                                &lt;div class="o_secondary"&gt;
+                                    &lt;field name="create_uid" /&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="o_kanban_manage_button_section"&gt;
+                                &lt;a class="o_kanban_manage_toggle_button" href="#"&gt;More &lt;i class="fa fa-caret-down"/&gt;&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="container o_kanban_card_content o_visible"&gt;
+                            &lt;div class="row"&gt;
+                                &lt;div class="col-xs-6 o_kanban_primary_left"&gt;
+                                    &lt;!-- Left content --&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-6 o_kanban_primary_right"&gt;
+                                    &lt;!-- Right content --&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-12 o_kanban_primary_bottom"&gt;
+                                    &lt;!-- Bottom content --&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="container o_kanban_card_manage_pane o_invisible"&gt;
+                            &lt;!-- Only shows when more is clicked --&gt;
+                            &lt;div class="row"&gt;
+                                &lt;div class="col-xs-4 o_kanban_card_manage_section"&gt;
+                                    &lt;div class="o_kanban_card_manage_title"&gt;Section 1&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-4 o_kanban_card_manage_section"&gt;
+                                    &lt;div class="o_kanban_card_manage_title"&gt;Section 2&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-4 o_kanban_card_manage_section"&gt;
+                                    &lt;div class="o_kanban_card_manage_title"&gt;Section 3&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="row o_kanban_card_settings"&gt;
+                                &lt;div class="col-xs-8"&gt;
+                                    &lt;ul class="oe_kanban_colorpicker" data-field="color"/&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-4 text-right"&gt;
+                                    &lt;a type="edit"&gt;Settings&lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/t&gt;
+            &lt;/templates&gt;
+        &lt;/kanban&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Kanban Vignette" enabled="true" name="o_record_view_kanban_vignette">&lt;record id="view_${Model}_kanban" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;${Class}.kanban&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="type"&gt;kanban&lt;/field&gt;
+    &lt;field name="priority"&gt;0&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;kanban&gt;
+            &lt;!-- Field declarations --&gt;
+            &lt;field name="name" /&gt;
+            &lt;templates&gt;
+                &lt;t t-name="kanban-box"&gt;
+                    &lt;div class="oe_kanban_vignette"&gt;
+                        &lt;div class="oe_kanban_content"&gt;
+                            &lt;!-- Option menu will go here --&gt;
+                            &lt;h4&gt;
+                                &lt;a type="open"&gt;
+                                    &lt;field name="name" /&gt;
+                                &lt;/a&gt;
+                            &lt;/h4&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;field name="create_date" /&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;field name="create_uid" /&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;div class="oe_kanban_bottom_right"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="oe_kanban_footer_left"&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/t&gt;
+            &lt;/templates&gt;
+        &lt;/kanban&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Kanban Vignette Image" enabled="true" name="o_record_view_kanban_vignette_image">&lt;record id="view_${Model}_kanban" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;${Class}.kanban&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="type"&gt;kanban&lt;/field&gt;
+    &lt;field name="priority"&gt;0&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;kanban&gt;
+            &lt;!-- Field declarations --&gt;
+            &lt;field name="name" /&gt;
+            &lt;templates&gt;
+                &lt;t t-name="kanban-box"&gt;
+                    &lt;div class="oe_kanban_vignette"&gt;
+                        &lt;img t—att-src="kanban_image('${Class}', '${image}', record.id.value)" class="oe_kanban_image" /&gt;
+                        &lt;div class="oe_kanban_details"&gt;
+                            &lt;!-- Option menu will go here --&gt;
+                            &lt;h4&gt;
+                                &lt;a type="open"&gt;
+                                    &lt;field name="name" /&gt;
+                                &lt;/a&gt;
+                            &lt;/h4&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;field name="create_date" /&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;field name="create_uid" /&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;div class="oe_kanban_bottom_right"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="oe_kanban_footer_left"&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/t&gt;
+            &lt;/templates&gt;
+        &lt;/kanban&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Pivot" enabled="true" name="o_record_view_pivot">&lt;record id="view_${Model}_pivot" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Class}.pivot&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;pivot string="${Description}" disable_linking="True"&gt;
+            &lt;field name="${Many2One}" type="${5:row}" /&gt;
+            &lt;field name="${DateField}" interval="month" type="row/col/g" /&gt;
+            &lt;field name="${NumericField}" type="measure" /&gt;
+        &lt;/pivot&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View resConfig" enabled="true" name="o_record_view_res_config">&lt;record id="view_${Model}_form" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;${Class}.form&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="type"&gt;form&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;form&gt;
+            &lt;header&gt;
+                &lt;button string="Apply" type="object" name="execute" class="oe_highlight"/&gt;
+                or
+                &lt;button string="Cancel" type="object" name="cancel" class="oe_link"/&gt;
+            &lt;/header&gt;
+            ${sheet}
+        &lt;/form&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+
+&lt;record model="ir.actions.act_window" id="action_${Model}"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="res_model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="view_type"&gt;form&lt;/field&gt;
+    &lt;field name="view_mode"&gt;form&lt;/field&gt;
+    &lt;field name="target"&gt;inline&lt;/field&gt;
+&lt;/record&gt;
+
+&lt;menuitem
+    id="menu_${Model}"
+    name="${Label}"
+    parent="base.menu_config"
+    action="action_${Model}" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo record View Search" enabled="true" name="o_record_view_search">&lt;record id="view_${Model}_search" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Class}.search&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;search string="${Label}"&gt;
+            &lt;field name="${FieldName}"/&gt;
+            &lt;filter string="${Label2}" domain="[${Domain}]"/&gt;
+            &lt;group expand="0" string="Group By"&gt;
+                &lt;filter string="${Label3}" context="{${Context}}"/&gt;
+            &lt;/group&gt;
+       &lt;/search&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Search Inherit" enabled="true" name="o_record_view_search_inherit">&lt;record id="view_${Model}_search_inherit" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Class}.search.inherit&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="inherit_id" ref="${ViewID}"/&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;field name="${field_name}" position="after:before:attributes:replace"&gt;
+        &lt;/field&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Tree" enabled="true" name="o_record_view_tree">&lt;record id="view_${Model}_tree" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Class}.tree&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;tree string="${Label}" decoration-info="state == 'draft'" decoration-muted="state in ('done', 'cancel')"&gt;
+            &lt;field name="${FieldName}"/&gt;
+       &lt;/tree&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Tree Inherit" enabled="true" name="o_record_view_tree_inherit">&lt;record id="view_${Model}_tree_inherit" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;view.${Class}.tree.inherit&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="inherit_id" ref="${ViewID}"/&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;field name="${field_name}" position="after:before:attributes:replace"&gt;
+        &lt;/field&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record View Wizard" enabled="true" name="o_record_view_wizard">&lt;record id="view_${Model}_form" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;${Class}.wizard&lt;/field&gt;
+    &lt;field name="model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;form string="${Description}"&gt;
+            &lt;!--separator string="${Title}" colspan="4" /--&gt;
+            &lt;!--or--&gt;
+            &lt;!--label string="${Title}" /--&gt;
+            &lt;!--or--&gt;
+            &lt;!--p class="oe_grey"&gt;
+                ${Title}
+            &lt;/p--&gt;
+            &lt;group&gt;
+                &lt;group&gt;
+                    &lt;field name="${field_name}" class="oe_inline" /&gt;
+                &lt;/group&gt;
+                &lt;group&gt;
+                    &lt;!--field name="${many2one}_id" options="{'no_open': True, 'no_create': True}" /--&gt;
+                &lt;/group&gt;
+            &lt;/group&gt;
+        &lt;footer&gt;
+            &lt;div class="oe_right"&gt;
+                &lt;button name="${action_button}" string="${action}" type="object" class="btn-primary" /&gt;
+                &lt;button special="cancel" string="Cancel" class="btn-default" /&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+        &lt;/form&gt;
+    &lt;/field&gt;
+&lt;/record&gt;
+
+&lt;record id="action_${Model}_form" model="ir.actions.act_window"&gt;
+    &lt;field name="name"&gt;${Description}&lt;/field&gt;
+    &lt;field name="res_model"&gt;${Class}&lt;/field&gt;
+    &lt;field name="view_type"&gt;form&lt;/field&gt;
+    &lt;field name="view_mode"&gt;form&lt;/field&gt;
+    &lt;field name="target"&gt;new&lt;/field&gt;
+    &lt;field name="view_id" ref="view_${Class}_form"/&gt;
+&lt;/record&gt;
+
+&lt;!--act_window
+    id="action_${Class}_form"
+    name="${Description}"
+    res_model="${Class}"
+    src_model="${src_class}"
+    view_mode="form"
+    target="new"
+    key2="client_action_multi" /--&gt;
+
+&lt;menuitem 
+    action="action_${Class}_form"
+    id="${Class}_menu"
+    parent="${main}"
+    sequence="${10}"
+/&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Workflow" enabled="true" name="o_record_workflow">&lt;record id="${Model}_workflow" model="workflow"&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="osv"&gt;${Class}&lt;/field&gt;
+    &lt;field name="on_create"&gt;True&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Workflow Activity" enabled="true" name="o_record_workflow_activity">&lt;record id="${Mode}_activity" model="workflow.activity"&gt;
+    &lt;field name="wkf_id" ref="${WorkflowName}_workflow"/&gt;
+    &lt;field name="name"&gt;${Label}&lt;/field&gt;
+    &lt;field name="flow_start"&gt;True&lt;/field&gt;
+    &lt;field name="flow_stop"&gt;True&lt;/field&gt;
+    &lt;field name="kind"&gt;dummy/function/stopall/subflow&lt;/field&gt;
+    &lt;field name="action"&gt;${5}&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Record Workflow Transition" enabled="true" name="o_record_workflow_transition">&lt;record id="${id_act1}_${id_act2}_transition" model="workflow.transition"&gt;
+    &lt;field name="act_from" ref="${id_act1}_activity"/&gt;
+    &lt;field name="act_to" ref="${id_act2}_activity"/&gt;
+    &lt;field name="signal"&gt;signal_${goto}_${id_act2}&lt;/field&gt;
+    &lt;field name="sequence"&gt;${31}&lt;/field&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Snippet" enabled="true" name="o_snippet">&lt;template id="${1}" inherit_id="website.snippets" name="${2}"&gt;
+    &lt;xpath expr="//div[@class='o_panel_body']" position="${inside}"&gt;
+        &lt;t t-snippet="theme_tutorial.snippet_testimonial" t-thumbnail="/theme_tutorial/static/src/img/ui/snippet_thumb.jpg"/&gt;
+    &lt;/xpath&gt;
+&lt;/template&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Act Window" enabled="true" name="o_tag_act_window">&lt;act_window
+    name="${ActionName}"
+    id="${Model}_action"
+    res_model="${Model}"
+    src_model="${Model2}"}
+    view_type="${form}"}
+    view_mode="tree,form,calendar,graph"}
+    view_id="${view_id}"}
+    domain="${domain}"}
+    context="${context}"}
+    groups="${Groups}"}
+    target="new"}
+    multi="True"}
+    key2="client_action_multi"}
+    web_icon="${61:module},static/description/icon.png"
+/&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Attribute" enabled="true" name="o_tag_attribute">&lt;attribute name="attrs"&gt;{'${attribute}': [('${field}', '=', ${condition})]}&lt;/attribute&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Delete Tag" enabled="true" name="o_tag_delete">&lt;delete model="${model_name}" search="[('id', '=', ref('${xml_id}'))]" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Field All" enabled="true" name="o_tag_field_all">&lt;field
+    name="${field_name}"
+    string="${Label}"
+    nolabel="${0}"
+    required="${0}"
+    readonly="${0}"
+    invisible="${0}"
+    widget="${char}"
+    class="oe_field_${Class}"
+    placeholder="${PlaceHolder}"
+    help="${ToolTip}"
+    mode="${tree}"
+    filename="${fiel_name}"
+    password="${0}"
+    domain="[${domain}]"
+    context="{${context}}"
+/&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Field Date" enabled="true" name="o_tag_field_date">&lt;field name="${field_name}" eval="time.strftime('%Y-%m-%d')" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Field DateTime" enabled="true" name="o_tag_field_datetime">&lt;field name="${field_name}" eval="time.strftime('%Y-%m-%d %H:%M:%S')" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Field Many2Many" enabled="true" name="o_tag_field_m2m">&lt;field name="${field_name}_id" eval="[(4, ref('model'))]" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Field Many2One" enabled="true" name="o_tag_field_m2o">&lt;field name="${field_name}_id" ref="${model}" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Field One2Many" enabled="true" name="o_tag_field_o2m">&lt;field name="${field_name}_ids" eval="[(4, ref('model'))]" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Field Selection" enabled="true" name="o_tag_field_selection">&lt;field name="${field_name}"&gt;${Value}&lt;/field&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Field Self Close" enabled="true" name="o_tag_field_self_close">&lt;field name="${FieldName}" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Field Text" enabled="true" name="o_tag_field_text">&lt;field name="${field_name}"&gt;
+    &lt;![CDATA[
+        ${content}
+    ]]${1}&gt;
+&lt;/field&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Filter Today" enabled="true" name="o_tag_fielter_today">&lt;filter name="${field_name}" string="${Label}" domain="[
+    (${date_field},'&gt;=', datetime.datetime.combine(context_today(), datetime.time(0,0,0))),
+    (${date_field},'&lt;=', datetime.datetime.combine(context_today(), datetime.time(23,59,59)))]"
+/&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Footer" enabled="true" name="o_tag_footer">&lt;footer&gt;
+    &lt;button name="${Function}" string="${Label}" type="object" class="oe_highlight"/&gt;
+    or
+    &lt;button string="Cancel" class="oe_link" special="cancel" /&gt;
+&lt;/footer&gt;
+${Cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Function" enabled="true" name="o_tag_function">&lt;function model="${model_name}" name="${function_name}" eval="(${arguments})" /&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Group Nested" enabled="true" name="o_tag_group_nested">&lt;group string="${1}" name="${2}"&gt;
+    &lt;group name="${3}" sring="${4}"&gt;${5}&lt;/group&gt;
+    &lt;group name="${6}" sring="${7}"&gt;${8}&lt;/group&gt;
+&lt;/group&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Header With Button and State" enabled="true" name="o_tag_header_button_state">&lt;header&gt;
+    &lt;button string="${Label}" type="workflow|object|action" name="signal|method|action_id" states="${state}" class="oe_highlight"/&gt;
+    &lt;field name="${field_name}" widget="statusbar" statusbar_visible="${states}" statusbar_colors="{'KEY_IS_STATE':'VALUE_IS_COLOR'}"/&gt;
+&lt;/header&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag hr" enabled="true" name="o_tag_hr">&lt;hr /&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Label" enabled="true" name="o_tag_label">&lt;label for="${FieldName}" class="oe_edit_only" /&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag MenuItem" enabled="true" name="o_tag_menuitem">&lt;menuitem id="${1}_menu" name="${Label}" parent="${menu_parent}" action="${action}" sequence="${10}" groups="${groups}" web_icon="module_file/static/description/icon.png"/&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag NewLine" enabled="true" name="o_tag_newline">&lt;br /&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag NoteBook" enabled="true" name="o_tag_notebook">&lt;notebook&gt;
+    &lt;page string="${1}" name="${2}"&gt;
+        &lt;group name="${3}" sring="${4}"&gt;
+            &lt;field name="${5}"/&gt;
+        &lt;/group&gt;
+    &lt;/page&gt;
+&lt;/notebook&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Page" enabled="true" name="o_tag_page">&lt;page string="${Label}" class="${Class}" accesskey="${AccessKey}"&gt;
+    &lt;group name="${GroupName}" sring="${Label2}"&gt;
+        &lt;field name="${field_name}"/&gt;
+    &lt;/group&gt;
+&lt;/page&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Report" enabled="true" name="o_tag_report">&lt;report
+    id="action_report_${model_name}"
+    model="${model}"
+    report_type="qweb-pdf"
+    string="${ReportName}"
+    name="${module_name}.report_${model_name}"
+    file="${module_name}.report_${model_name}" 
+/&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Report With PaperFormat" enabled="true" name="o_tag_report_paperformat">&lt;report
+    id="action_report_${model_name}"
+    model="${model}"
+    report_type="qweb-pdf"
+    string="${ReportName}"
+    name="${module_name}.report_${model_name}"
+    file="${module_name}.report_${model_name}" 
+/&gt;
+
+&lt;record id="action_report_${model_name}" model="ir.actions.report.xml"&gt;
+    &lt;field name="paperformat_id" ref="${paperformat_id}" /&gt;
+&lt;/record&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Separator" enabled="true" name="o_tag_separator">&lt;separator colspan="${2}" string="${Label}"/&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Table" enabled="true" name="o_tag_table">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;${1}&lt;/th&gt;
+      &lt;th&gt;${2}&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;${3}&lt;/td&gt;
+      &lt;td&gt;${4}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;${5}&lt;/td&gt;
+      &lt;td&gt;${6}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;${7}&lt;/td&gt;
+      &lt;td&gt;${8}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Tag Xpath" enabled="true" name="o_tag_xpath">&lt;xpath expr="//field[@name='employee_id']" position="after/before/replace/attributes"&gt;
+    ${3}
+&lt;/xpath&gt;
+${cursor}</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Template" enabled="true" name="o_template">&lt;template id="${1}" name= ${2}&gt;
+     ${3}
+&lt;/template&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo Template Inherit" enabled="true" name="o_template_inherit">&lt;template id="${template_name}" name="${template_name}" inherit_id="${model_name}.${template_name}"&gt;
+    &lt;xpath expr="" position=""&gt;
+		${cursor}
+    &lt;/xpath&gt;
+&lt;/template&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="Odoo XML File" enabled="true" name="o_xml_file">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;odoo&gt;
+    &lt;data&gt;
+        ${cursor}
+    &lt;/data&gt;
+&lt;/odoo&gt;</template><template autoinsert="true" context="xml_attribute" deleted="false" description="XML Schema location attribute" enabled="true" id="org.eclipse.wst.xml.ui.internal.templates.schemaLoc" name="schemaLoc">xsi:schemaLocation="{namespace} {location}"</template><template autoinsert="true" context="xml_new" deleted="false" description="xml declaration" enabled="true" id="org.eclipse.wst.xml.ui.internal.templates.xmldeclaration" name="xml declaration">&lt;?xml version="1.0" encoding="${encoding}"?&gt;</template><template autoinsert="true" context="xml_attribute" deleted="false" description="XML Schema name space" enabled="true" id="org.eclipse.wst.xml.ui.internal.templates.xsinsp" name="xsinsp">xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</template><template autoinsert="true" context="xml_tag" deleted="false" description="XSL processing instruction" enabled="true" id="org.eclipse.wst.xml.ui.internal.templates.xslpi" name="XSL processing instruction">&lt;?xml-stylesheet type="text/xsl" href="${cursor}"?&gt;</template></templates>

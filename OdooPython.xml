@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="false" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="Module: Empty" enabled="true" id="org.python.pydev.editor.templates.python.module.empty" name="&lt;Empty&gt;">'''
+Created on ${date}
+
+@author: ${user}
+'''
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="and keyword" enabled="true" id="org.python.pydev.editor.templates.python.and" name="and">and ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="assert keyword" enabled="true" id="org.python.pydev.editor.templates.python.assert" name="assert">assert ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="break keyword" enabled="true" id="org.python.pydev.editor.templates.python.break" name="break">break${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Class definition (simple)" enabled="true" id="org.python.pydev.editor.templates.python.class" name="class">class ${class}:${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Class definition (subclass)" enabled="true" id="org.python.pydev.editor.templates.python.classo" name="classs">class ${class}(${object}):${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="encoding comment" enabled="true" id="org.python.pydev.editor.templates.python.encoding.comment" name="cod"># encoding: ${word_selection}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="encoding comment: utf-8" enabled="true" id="org.python.pydev.editor.templates.python.encoding.comment.utf8" name="codu8"># encoding: utf-8</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="continue keyword" enabled="true" id="org.python.pydev.editor.templates.python.continue" name="continue">continue${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Method definition (global)" enabled="true" id="org.python.pydev.editor.templates.python.def" name="def">def ${method}():${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Method definition (class)" enabled="true" id="org.python.pydev.editor.templates.python.defc" name="defc">def ${method}(self):${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Method definition (class - with parameters)" enabled="true" id="org.python.pydev.editor.templates.python.defp" name="defp">def ${method}(self, ${params}):${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="del keyword" enabled="true" id="org.python.pydev.editor.templates.python.del" name="del">del ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="elif keyword" enabled="true" id="org.python.pydev.editor.templates.python.elif" name="elif">elif${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="else keyword" enabled="true" id="org.python.pydev.editor.templates.python.else" name="else">else${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="equals and not equals" enabled="true" id="org.python.pydev.editor.templates.python.eq" name="eq">def __eq__(self, o):
+    if isinstance(o, ${current_class}):
+        ${pass}${cursor}
+
+    return False
+
+def __ne__(self, o):
+	return not self == o</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="for keyword" enabled="true" id="org.python.pydev.editor.templates.python.for" name="for">for ${cursor}:</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="from keyword" enabled="true" id="org.python.pydev.editor.templates.python.from" name="from">from ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="global keyword" enabled="true" id="org.python.pydev.editor.templates.python.global" name="global">global ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="import keyword" enabled="true" id="org.python.pydev.editor.templates.python.import" name="import">import ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="def __init__(self):" enabled="true" id="org.python.pydev.editor.templates.python.ini" name="ini">def __init__(self):${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="def __init__(self, ${params})" enabled="true" id="org.python.pydev.editor.templates.python.init" name="inip">def __init__(self, ${params}):${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="lambda keyword" enabled="true" id="org.python.pydev.editor.templates.python.lambda" name="lambda">lambda ${args}:${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Main function pattern." enabled="true" id="org.python.pydev.editor.templates.python.main" name="main">if __name__ == '__main__':
+    ${cursor}</template><template autoinsert="false" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="Module: Class" enabled="true" id="org.python.pydev.editor.templates.python.module.class" name="Module: Class">'''
+Created on ${date}
+
+@author: ${user}
+'''
+
+class ${MyClass}(${object}):
+    '''
+    ${classdocs}
+    '''
+
+
+    def __init__(self, ${params}):
+        '''
+        ${Constructor}
+        '''
+        ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="Module: Command line tool skeleton using argparse (suitable for Python 2.7+)" enabled="true" id="org.python.pydev.editor.templates.python.module.cli.argparse" name="Module: CLI (argparse)">#!/usr/local/bin/python2.7
+# encoding: utf-8
+'''
+${module} -- ${shortdesc}
+
+${module} is a ${description}
+
+It defines ${classes_and_methods}
+
+@author:     ${user_name}
+
+@copyright:  ${year} ${organization_name}. All rights reserved.
+
+@license:    ${license}
+
+@contact:    ${user_email}
+@deffield    updated: Updated
+'''
+
+import sys
+import os
+
+from argparse import ArgumentParser
+from argparse import RawDescriptionHelpFormatter
+
+__all__ = []
+__version__ = 0.1
+__date__ = '${isodate}'
+__updated__ = '${isodate}'
+
+DEBUG = 1
+TESTRUN = 0
+PROFILE = 0
+
+class CLIError(Exception):
+    '''Generic exception to raise and log different fatal errors.'''
+    def __init__(self, msg):
+        super(CLIError).__init__(type(self))
+        self.msg = "E: %s" % msg
+    def __str__(self):
+        return self.msg
+    def __unicode__(self):
+        return self.msg
+
+def main(argv=None): # IGNORE:C0111
+    '''Command line options.'''
+
+    if argv is None:
+        argv = sys.argv
+    else:
+        sys.argv.extend(argv)
+
+    program_name = os.path.basename(sys.argv[0])
+    program_version = "v%s" % __version__
+    program_build_date = str(__updated__)
+    program_version_message = '%%(prog)s %s (%s)' % (program_version, program_build_date)
+    program_shortdesc = __import__('__main__').__doc__.split("\n")[1]
+    program_license = '''%s
+
+  Created by ${user_name} on %s.
+  Copyright ${year} ${organization_name}. All rights reserved.
+
+  Licensed under the Apache License 2.0
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Distributed on an "AS IS" basis without warranties
+  or conditions of any kind, either express or implied.
+
+USAGE
+''' % (program_shortdesc, str(__date__))
+
+    try:
+        # Setup argument parser
+        parser = ArgumentParser(description=program_license, formatter_class=RawDescriptionHelpFormatter)
+        parser.add_argument("-r", "--recursive", dest="recurse", action="store_true", help="recurse into subfolders [default: %(default)s]")
+        parser.add_argument("-v", "--verbose", dest="verbose", action="count", help="set verbosity level [default: %(default)s]")
+        parser.add_argument("-i", "--include", dest="include", help="only include paths matching this regex pattern. Note: exclude is given preference over include. [default: %(default)s]", metavar="RE" )
+        parser.add_argument("-e", "--exclude", dest="exclude", help="exclude paths matching this regex pattern. [default: %(default)s]", metavar="RE" )
+        parser.add_argument('-V', '--version', action='version', version=program_version_message)
+        parser.add_argument(dest="paths", help="paths to folder(s) with source file(s) [default: %(default)s]", metavar="path", nargs='+')
+
+        # Process arguments
+        args = parser.parse_args()
+
+        paths = args.paths
+        verbose = args.verbose
+        recurse = args.recurse
+        inpat = args.include
+        expat = args.exclude
+
+        if verbose &gt; 0:
+            print("Verbose mode on")
+            if recurse:
+                print("Recursive mode on")
+            else:
+                print("Recursive mode off")
+
+        if inpat and expat and inpat == expat:
+            raise CLIError("include and exclude pattern are equal! Nothing will be processed.")
+
+        for inpath in paths:
+            ### do something with inpath ###
+            print(inpath)
+        return 0
+    except KeyboardInterrupt:
+        ### handle keyboard interrupt ###
+        return 0
+    except Exception, e:
+        if DEBUG or TESTRUN:
+            raise(e)
+        indent = len(program_name) * " "
+        sys.stderr.write(program_name + ": " + repr(e) + "\n")
+        sys.stderr.write(indent + "  for help use --help")
+        return 2
+
+if __name__ == "__main__":
+    if DEBUG:
+        sys.argv.append("-h")
+        sys.argv.append("-v")
+        sys.argv.append("-r")
+    if TESTRUN:
+        import doctest
+        doctest.testmod()
+    if PROFILE:
+        import cProfile
+        import pstats
+        profile_filename = '${module}_profile.txt'
+        cProfile.run('main()', profile_filename)
+        statsfile = open("profile_stats.txt", "wb")
+        p = pstats.Stats(profile_filename, stream=statsfile)
+        stats = p.strip_dirs().sort_stats('cumulative')
+        stats.print_stats()
+        statsfile.close()
+        sys.exit(0)
+    sys.exit(main())</template><template autoinsert="true" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="Module: Command line tool skeleton using optparse (suitable for Python &lt; 2.6)" enabled="true" id="org.python.pydev.editor.templates.python.module.cli.optparse" name="Module: CLI (optparse)">#!/usr/bin/env python
+# encoding: utf-8
+'''
+${module} -- ${shortdesc}
+
+${module} is a ${description}
+
+It defines ${classes_and_methods}
+
+@author:     ${user_name}
+
+@copyright:  ${year} ${organization_name}. All rights reserved.
+
+@license:    ${license}
+
+@contact:    ${user_email}
+@deffield    updated: Updated
+'''
+
+import sys
+import os
+
+from optparse import OptionParser
+
+__all__ = []
+__version__ = 0.1
+__date__ = '${isodate}'
+__updated__ = '${isodate}'
+
+DEBUG = 1
+TESTRUN = 0
+PROFILE = 0
+
+def main(argv=None):
+    '''Command line options.'''
+
+    program_name = os.path.basename(sys.argv[0])
+    program_version = "v0.1"
+    program_build_date = "%s" % __updated__
+
+    program_version_string = '%%prog %s (%s)' % (program_version, program_build_date)
+    #program_usage = '''usage: spam two eggs''' # optional - will be autogenerated by optparse
+    program_longdesc = '''''' # optional - give further explanation about what the program does
+    program_license = "Copyright ${year} ${user_name} (${organization_name})                                            \
+                Licensed under the Apache License 2.0\nhttp://www.apache.org/licenses/LICENSE-2.0"
+
+    if argv is None:
+        argv = sys.argv[1:]
+    try:
+        # setup option parser
+        parser = OptionParser(version=program_version_string, epilog=program_longdesc, description=program_license)
+        parser.add_option("-i", "--in", dest="infile", help="set input path [default: %default]", metavar="FILE")
+        parser.add_option("-o", "--out", dest="outfile", help="set output path [default: %default]", metavar="FILE")
+        parser.add_option("-v", "--verbose", dest="verbose", action="count", help="set verbosity level [default: %default]")
+
+        # set defaults
+        parser.set_defaults(outfile="./out.txt", infile="./in.txt")
+
+        # process options
+        (opts, args) = parser.parse_args(argv)
+
+        if opts.verbose &gt; 0:
+            print("verbosity level = %d" % opts.verbose)
+        if opts.infile:
+            print("infile = %s" % opts.infile)
+        if opts.outfile:
+            print("outfile = %s" % opts.outfile)
+
+        # MAIN BODY #
+
+    except Exception, e:
+        indent = len(program_name) * " "
+        sys.stderr.write(program_name + ": " + repr(e) + "\n")
+        sys.stderr.write(indent + "  for help use --help")
+        return 2
+
+
+if __name__ == "__main__":
+    if DEBUG:
+        sys.argv.append("-h")
+    if TESTRUN:
+        import doctest
+        doctest.testmod()
+    if PROFILE:
+        import cProfile
+        import pstats
+        profile_filename = '${module}_profile.txt'
+        cProfile.run('main()', profile_filename)
+        statsfile = open("profile_stats.txt", "wb")
+        p = pstats.Stats(profile_filename, stream=statsfile)
+        stats = p.strip_dirs().sort_stats('cumulative')
+        stats.print_stats()
+        statsfile.close()
+        sys.exit(0)
+    sys.exit(main())</template><template autoinsert="false" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="Module: Main" enabled="true" id="org.python.pydev.editor.templates.python.module.main" name="Module: Main">'''
+Created on ${date}
+
+@author: ${user}
+'''
+
+if __name__ == '__main__':
+    ${pass}${cursor}</template><template autoinsert="false" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="Module: Unittest" enabled="true" id="org.python.pydev.editor.templates.python.module.unittest" name="Module: Unittest">'''
+Created on ${date}
+
+@author: ${user}
+'''
+import unittest
+
+
+class Test(unittest.TestCase):
+
+
+    def test${Name}(self):
+        ${pass}${cursor}
+
+
+if __name__ == "__main__":
+    #import sys;sys.argv = ['', 'Test.test${Name}']
+    unittest.main()</template><template autoinsert="false" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="Module: Unittest with setUp and tearDown" enabled="true" id="org.python.pydev.editor.templates.python.module.setup_and_teardown" name="Module: Unittest with setUp and tearDown">'''
+Created on ${date}
+
+@author: ${user}
+'''
+import unittest
+
+
+class Test(unittest.TestCase):
+
+
+    def setUp(self):
+        pass
+
+
+    def tearDown(self):
+        pass
+
+
+    def test${Name}(self):
+        ${pass}${cursor}
+
+
+if __name__ == "__main__":
+    #import sys;sys.argv = ['', 'Test.test${Name}']
+    unittest.main()</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="not keyword" enabled="true" id="org.python.pydev.editor.templates.python.not" name="not">not ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Sql Constraints" enabled="true" name="o__sql_constraints">_sql_constraints = [
+    ("${code}", "${SqlMethod}", "${Message}"),
+]${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Fields All Attributes" enabled="true" name="o_all_attributes">string="Label",
+help="Tooltip"
+readonly=True,
+required=True,
+index=True,
+default=DefaultValue,
+states="{'readonly':True, 'required':True, 'invisible':True}}"
+groups="group1,group2,group3"
+copy=True
+store=True
+oldname="Label"  # migration rename
+auto_join=True # Many2one
+comodel_name="ComodelName" # Many2One
+delegate=True,  # Many2One - corresponds to _inherits
+ondelete="set null|restrict|cascade" # Many2One
+domain="[('field', =, Value)]" # Many2one
+context={"Key": Value} # Many2One
+size=40  # supported by: Char
+translate=True|Callable  # supported by: Char
+related="sequence of field names"
+related_sudo="sequence of field names"
+company_dependent=True
+company_sudo=True
+sparse="the name of the field where the value of this field must be stored"
+inverse_name='inverse_name_id',  # must be a Many2one, not mandatory if related field or field extensions
+limit=100, # Many2one, One2Many and Many2Many
+relation='table_name', # Many2Many - optional, autogenerated
+column1='column_local', # Many2Many
+column2='column_foreign', # Many2Many
+compute='_compute_fieldname'
+inverse='_inverse_fieldname'
+search='_search_fieldname'
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Attribute Compute" enabled="true" name="o_attr_compute">compute='_compute_${MethodName}', inverse='_inverse_${MethodName}', search='_search_${MethodName}', ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Attribute dp" enabled="true" name="o_attr_dp">digits=dp.get_precision("${name}") ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Field Attribute Lambda" enabled="true" name="o_attr_lambda">lambda self: self.${Method}()${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Field Attribute OnDelete" enabled="true" name="o_attr_ondelete">ondelete="set null/restrict/cascade" ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Attribute Related" enabled="true" name="o_attr_related">related="${model}.${field}" ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Field Attribute Track Visibility" enabled="true" name="o_attr_track_visibility">track_visibility='${onchange}'${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Class" enabled="true" name="o_class"># -*- coding: utf-8 -*-
+##############################################################################
+#
+#    Odoo, Open Source Management Solution
+#    Copyright (c) 2019 Waell Ahmed (http://www.genericdev.com) info &lt;waell.alameldeen@gmail.com&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+from odoo import api, fields, models, _
+
+import logging
+_logger = logging.getLogger(__name__)
+
+########## ########## ########## ########## ##########
+# ${Description}
+########## ########## ########## ########## ##########
+class ${Class}(models.Model):
+    _name = '${ObjectName}'
+    _description = '${ClassDescription}'
+    _rec_name = ""
+    _order = ""
+    _table=""
+
+    STATES = [
+        ('draft', 'Draft'),
+        ('confirmed', 'Confirm'),
+        ('done', 'Done'),
+    ]
+
+    name = fields.Char(string='${Label}', required=True, translate=True)
+    state = fields.Selection(STATES, string='${Label}', readonly=True)
+    active = fields.Boolean(string="Active", default=True)${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Class Inherit" enabled="true" name="o_class_inh"># -*- coding: utf-8 -*-
+##############################################################################
+#
+#    Odoo, Open Source Management Solution
+#    Copyright (c) 2019 Waell Ahmed (http://www.genericdev.com) info &lt;waell.alameldeen@gmail.com&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+
+from odoo import api, fields, models, _
+
+import logging
+_logger = logging.getLogger(__name__)
+
+########## ########## ########## ########## ##########
+# ${Description}
+########## ########## ########## ########## ##########
+class ${Class}(models.Model):
+    _name = '${ObjectName}'
+    _inherit = '${MainObjectName}'
+    _inherit = ['mail.thread',${cursor}]
+    _inherits = ["${parentModel}": "${field_id}"${cursor}]
+    ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Compute Inverse Method" enabled="true" name="o_compute_inverse_method">@api.multi
+@api.depends('${Field}')
+def _inverse_${Field}(self):
+    for rec in self:
+        if rec.${Field}:
+            ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Compute Method" enabled="true" name="o_compute_method">@api.multi
+@api.depends('${Fields}')
+@api.onchange('${Fields}')
+def _compute_${Field}(self):
+    for rec in self:
+        if rec.${Field}:
+            ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Compute Method Full" enabled="true" name="o_compute_method_full">@api.multi
+@api.depends('${Fields}')
+@api.onchange('${Fields}')
+def _compute_${Field}(self):
+    for rec in self:
+        if rec.${Field}:
+            ${cursor}
+
+@api.multi
+@api.depends('${Field}')
+def _inverse_${Field}(self):
+    for rec in self:
+        if rec.${Field}:
+            ${cursor}
+            
+@api.multi
+@api.depends('${Field}')
+def _search_${Field}(self, operator, value):
+    for rec in self:
+        if operator == 'like':
+            operator = 'ilike'
+        return [("${new_field}", operator, value)]}
+        ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Compute Search Method" enabled="true" name="o_compute_search_mthod">@api.multi
+@api.depends('${Field}')
+def _search_${Field}(self, operator, value):
+    for rec in self:
+        if operator == 'like':
+            operator = 'ilike'
+        return [("${new_field}", operator, value)]}
+        ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Constrains Method" enabled="true" name="o_constrains_method">@api.multi
+@api.constrains('${Fields}')
+def _check_${Field}(self):
+    for rec in self:
+        if rec.${Field}:
+            raise UserError(_('${Message}'))
+       ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Context" enabled="true" name="o_context">{
+    'state': 'posted',
+    'measures': ['10'],
+    'search_default_current': 1,
+    'search_default_partner_id': [active_id],
+    'search_default_category_id': ref('base.module_category_localization'),
+    'default_partner_id': active_id,
+    'default_invoice_ids': [(4, active_id, None)],
+    'default_name': 'name',
+    'default_partner_to': 'object.id',
+    'default_active_domain': [['id', 'in', context.get('active_ids', [])]],
+    'group_by': ['date_closed:month'],
+    'col_group_by': ['create_date:month'],
+    'group_by_no_leaf': 1,
+}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Controller" enabled="true" name="o_controller"># -*- coding: utf-8 -*-
+##############################################################################
+#
+#    Odoo, Open Source Management Solution
+#    Copyright (c) 2019 Waell Ahmed (http://www.genericdev.com) info &lt;waell.alameldeen@gmail.com&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+
+from odoo.http import route, request, Controller
+from odoo import _
+from odoo.addons.website.models.website import slug
+from odoo.http import request
+from logging import getLogger
+_logger = getLogger(__name__)
+${1}
+
+########## ########## ########## ########## ##########
+# ${2:Description}
+########## ########## ########## ########## ##########
+class ${3:Class}(http.Controller):
+    @http.route('/jobs/add', type='http', auth="user", website=True)
+    def jobs_add(self, **kwargs):
+        # avoid branding of website_description by setting rendering_bundle in context
+        job = request.env['hr.job'].with_context(rendering_bundle=True).create({
+            'name': _('Job Title'),
+        })
+        return request.redirect("/jobs/detail/%s?enable_editor=1" % slug(job))
+
+    @http.route('/jobs/detail/&lt;model("hr.job"):job&gt;', type='http', auth="public", website=True)
+    def jobs_detail(self, job, **kwargs):
+        return request.render("website_hr_recruitment.detail", {
+            'job': job,
+            'main_object': job,
+        })
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Copy Method" enabled="true" name="o_copy_methd">@api.multi
+def copy(self, default=None):
+    """
+        Create a new record in ${ModelName} model from existing one
+        @param default: dict which contains the values to be override during
+        copy of object
+
+        @return: returns a id of newly created record
+    """
+    for rec in self:
+        default = dict(default or {})
+        default.update(
+           ${1:name} = _('%s (copy)') % (self.${name} or ''),
+           ${2:code} = _('%s (copy)') % (self.${code} or ''),
+        )
+        return super(${ClassName}, self).copy(default)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo CopyWrite" enabled="true" name="o_copywrite"># -*- coding: utf-8 -*-
+##############################################################################
+#
+#    Odoo, Open Source Management Solution
+#    Copyright (c) 2019 Waell Ahmed (http://www.genericdev.com) info &lt;waell.alameldeen@gmail.com&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Create Method" enabled="true" name="o_create_method">@api.model
+def create(self, vals):
+    """
+        Create a new record for a model ${ModelName}
+        @param values: provides a data for new record
+
+        @return: returns a id of new record
+    """
+    res = super(${1:Class}, self).create(vals)
+    return res
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Impoer Date Format" enabled="true" name="o_date_format">from odoo.tools import DEFAULT_SERVER_DATE_FORMAT</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Date Methods" enabled="true" name="o_date_methods">fields.Date.context_today()
+fields.Date.from_string()
+fields.Date.to_string()
+fields.Date.today()
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Import DateTime Format" enabled="true" name="o_datetime_format">from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo DateTime Methods" enabled="true" name="o_datetime_methods">fields.Datetime.context_timestamp()
+fields.Datetime.from_string()
+fields.Datetime.to_string()
+fields.Datetime.now()
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Debug Info" enabled="true" name="o_debug_info">_logger.info("${Message}")</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Debug Warning" enabled="true" name="o_debug_warning">_logger.warning("${Message}")</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Default Get" enabled="true" name="o_default_get">@api.model
+def default_get(self, fields):
+    res = super(${Class}, self).default_get(fields)
+    context = dict(self._context)
+    ${var_name} = context.get('${var_name}', False)
+    res.update({'${field_name}': ${var_name}})
+    return res
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="DocString" enabled="true" name="o_docstring">"""
+    Description_example
+
+    Args:
+        param1 (int): des_example
+
+    Returns:
+        bool: True if successful, False otherwise.
+""
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Domain" enabled="true" name="o_domain">[
+	'|',
+    ('state', '=', 'posted'),
+    ('type', 'not in', ['out_invoice', 'out_refund']),
+    ('asset_category_id.type', 'like', 'purchase'),
+    ('id', 'in', active_ids),
+    ('product_id.product_tmpl_id.id', '=', active_id),
+    ('create_date', '&gt;=', time.strftime('%Y-%m-%d 00:00:00')),
+    ('date_deadline','&lt;', time.strftime('%Y-%m-%d')),
+    ('id', 'child_of', active_id),
+    ('category_id', 'not in', [ref('base.module_category_hidden', False), ref('base.module_category_theme_hidden', False)]),
+    ('maintenance_type', 'in', context.get('maintenance_type', ['preventive', 'corrective'])),
+]
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Ensure One" enabled="true" name="o_ensure_one">self.ensure_one()
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Self.Env" enabled="true" name="o_env">${name}_obj = self.env['${object}']
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Exists" enabled="true" name="o_exists">self.exists()
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Binary Field" enabled="true" name="o_fbinary">${new_field} = fields.Binary(string="${2:Label}", )
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Boolean Field" enabled="true" name="o_fboolean">is_${new_field} = fields.Boolean(string="${Label}", default=False )
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Char Field" enabled="true" name="o_fchar">${new_field} = fields.Char(string="${Label}", required=False, translate=False )
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Date Field" enabled="true" name="o_fdate">${new_field} = fields.Date(string="${Label}", default=fields.Date.today)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo DateTime Field" enabled="true" name="o_fdatetime">${new_field} = fields.Datetime(string="${Label}", default=fields.Date.now)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Float Field" enabled="true" name="o_ffloat">${new_field} = fields.Float(string="${Label}", digits=(16,2))
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo HTML Field" enabled="true" name="o_fhtml">${new_field} = fields.Html(string="${Label}", )
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Field View Get Method" enabled="true" name="o_field_view_get_method">@api.model
+def fields_view_get(self, view_id=None, view_type='form', toolbar=False, submenu=False):
+    from lxml import etree
+    import json
+    result = super(${1:Class}, self).fields_view_get(view_id, view_type, toolbar=toolbar, submenu=submenu)
+    if view_type == 'form':
+        doc = etree.XML(result['arch'])
+        for node in doc.xpath("//field[@name='field_name']"):
+	    # Add attrs
+            modifiers = json.loads(node.get("modifiers", '{}'))
+            modifiers.update({'invisible': [('field', 'operator', 'value')]})
+            node.set("modifiers", json.dumps(modifiers))
+            result['arch'] = etree.tostring(doc)
+    return result
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Filtered" enabled="true" name="o_filtered">${self}.filtered(${Function})
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Integer Field" enabled="true" name="o_finteger">${new_field} = fields.Integer(string="${Label}", )
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Many2Many Field" enabled="true" name="o_fm2m">${new_field}_ids = fields.Many2many(comodel_name="${comodel_name}", relation="${Relation}_rel", column1="${Column1}_id", column2="${Column2}_id", string="${Label}", domain="[]", context="{}")
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Many2One Field" enabled="true" name="o_fm2o">${new_field}_id = fields.Many2one(comodel_name="${comodel_name}", string="${Label}", domain="[]", context="{}")
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo FIeld Reference" enabled="true" name="o_freference">REFERENCE_SELECTION = [
+    ("${model_name1}", "${Label1}"),
+     ("${model_name2}", "${Label2}"),
+]
+
+${name}_id = fields.Reference(string="${Label}", selection=REFERENCE_SELECTION)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Field Selection " enabled="true" name="o_fselection">SELECTION = [
+    ("${value}", "${Label1}"),
+     ("${value2}", "${Label2}"),
+]
+
+${name}_id = fields.Selection(selection=SELECTION, string="${Label}")
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Field Text" enabled="true" name="o_ftext">${new_field} = fields.Text(string="${Label}")
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Import DP" enabled="true" name="o_import_dp">from odoo.addons.decimal_precision import decimal_precision as dp</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Import Loging" enabled="true" name="o_import_loging">import logging
+_logger = logging.getLogger(__name__)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Import UserError" enabled="true" name="o_import_user_error">from odoo.exceptions import UserError</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Import ValidationError" enabled="true" name="o_import_validation_error">from odoo.exceptions import ValidationError</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo init Method" enabled="true" name="o_init_method">def init(self, cr):
+    """ Build database view which will be used as module origin
+
+        :param cr: database cursor
+    """
+
+    self._sql_query = """
+        SELECT
+            ROW_NUMBER() OVER() AS "id"
+    """
+
+    drop_view_if_exists(cr, self._table)
+    cr.execute(
+        'create or replace view {} as ({})'.format(
+            ${1},
+            self._sql_query
+        )
+    )
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="odoo ManiFest File" enabled="true" name="o_manifest_file"># -*- coding: utf-8 -*-
+##############################################################################
+#
+#    Odoo, Open Source Management Solution
+#    Copyright (c) ${2019} Waell Ahmed (http://www.genericdev.com) info &lt;waell.alameldeen@gmail.com&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+{
+    'name' : "${ModuleName}",
+    'version' : '0.1',
+    'summary': "${ModuleName}",
+    'sequence': 50,
+    'description': "${ModuleName}",
+    # Technical Settings, Localization, Account Charts, Sales, Lead Automation, Project, Inventory, Manufacturing, Invoicing and Payments, Accounting and Finance, Purchases, User types, 
+    # Employees, Leaves, Contracts, Recruitment, Expenses, Timesheets, Attendance, Appraisals, Payroll, Gamification, Events, Email Marketing, Survey, Point of Sale, Specific Industry Applications,
+    # Website, Document Signatures, After-Sales, Theme, Administration, Extra Rights, Other Extra Rights and Uncategorized
+    'category': "${Testing}",
+    'author' : "Waell Ahmed",
+    'website': "www.genericdev.com",
+    'external_dependencies': {
+        'python': [],
+    },
+    'depends' : ["base"],
+    'data': [
+        # 'security/_security.xml',
+        # 'security/ir.model.access.csv',
+	    ${6}
+    ],
+    'demo': [],
+    'images' : [],
+    'js': [],
+    'css': [],
+    'qweb': [${8}],
+    'test': [${9}],
+    'license': 'AGPL-3',
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}
+${cursor}
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Mapped" enabled="true" name="o_mapped">${self}.mapped(key = function)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Name Search" enabled="true" name="o_name_search">self.name_search(name="${Name}", args="${None}", operator="${ilike}", limit=${100})${10}
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo name Search Method" enabled="true" name="o_name_search_method">@api.model
+@api.depends("${name}", "${code}")
+def name_search(self, name, args=None, operator='ilike', limit=100):
+    args = args or []
+    domain = []
+    if name:
+        domain = ["|", ("${code}", "=", name), ("${name}", operator, name)]
+        if operator in expression.NEGATIVE_TERM_OPERATORS:
+            domain = ["&amp;"] + domain
+    ${item} = self.search(expression.AND([domain, args]), limit=limit)
+    return ${item}.name_get()\
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Name Get Method" enabled="true" name="o_nameget_method">@api.multi
+@api.depends("${name}", "${code}")
+def name_get(self):
+    result = []
+    for rec in self:
+        name = '%s [%s]' % (rec.${name}, rec.${code})
+        result.append((rec.id, name))
+    return result
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo OnChange Method" enabled="true" name="o_onchange_method">@api.multi
+@api.onchange("${Fields}")
+def _onchange_${Field}(self):
+    for rec in self:
+        rec.${Field} = ${Value}
+       ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Return Domain From OnChange Method" enabled="true" name="o_onchange_return_domain">@api.onchange('${field_name}')
+def _onchange_${field_name}(self):
+    return {
+        'domain': {
+            '${field_name}': [('${field_name}', '=', self.${1})],
+        }
+    }
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Return Warning From OnChange Method" enabled="true" name="o_onchange_return_warning">@api.onchange('${field}')
+def _onchange_${field}(self):
+    return {
+        'warning': {
+            'title': '${2:Title}',
+            'message': '${3:Message}'
+        }
+    }${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Print Variable" enabled="true" name="o_print_variable">print "${Message} = " + str(${Variable})
+print "%s: %s " % ("${Label}", ${Variable})</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Debug pudb" enabled="true" name="o_pudb">import pudb
+pudb.set_trace()</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Read Group" enabled="true" name="o_read_group">${1:self}.read_group(
+    domain = ${domain},
+    fields = [${fields}],
+    groupby = ['field.day|week|month|quarter|year'])
+    offset = int,
+    orderby = [fields, 'supported only for many2one fields currently'],
+    offset = ${False},
+)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Read Method" enabled="true" name="o_read_method">@api.multi
+def read(self, fields=None, load='_classic_read'):
+    res = super(${Class}, self).read(fields)
+    ${10}
+    return res
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Redirect (Return)" enabled="true" name="o_redirect">return {
+    'type' : 'ir.actions.act_url',
+    'url' : '/url/to/redirect',
+    'target': 'current|new',
+}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo RelativeDelta" enabled="true" name="o_relativedelta">(DateTime.now() - relativedelta(months=2)).strftime('%Y-%m-%d %H:%M:%S')${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Report Class" enabled="true" name="o_report_class"># -*- coding: utf-8 -*-
+##############################################################################
+#
+#    Odoo, Open Source Management Solution
+#    Copyright (c) 2019 Waell Ahmed (http://www.genericdev.com) info &lt;waell.alameldeen@gmail.com&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+
+from odoo import api, fields, models, _
+${1}
+
+########## ########## ########## ########## ##########
+# ${Description}
+########## ########## ########## ########## ##########
+class ${Class}(models.AbstractModel):
+    _name = "${ObjectName}"
+    _description = "${ClassDescription}"
+
+    @api.multi
+    def render_html(self, data):
+	report_obj = self.env['report']
+        self.model = self.env.context.get('active_model')
+        docs = self.env[self.model].browse(self.env.context.get('active_id'))
+        docargs = {
+            'doc_ids': self.ids,
+            'doc_model': self.model,
+            'data': data['form'],
+            'docs': docs,
+            'time': time,
+            '': account_res,
+	    'example_method': partial(self._example_method),
+        }
+        return report_obj.render('${5:module_name}.report_${6:name}', docargs)
+
+    # -----------------------------------
+    # The example method is declared here
+    # -----------------------------------
+    def _example_method(self, parameter_1, parameter_2, context=None):
+        # From within the report view you can call this method by typing &lt;span t-esc="example_method(parameter_1, parameter_2)" /&gt;
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Create Report View" enabled="true" name="o_report_view"># -*- coding: utf-8 -*-
+##############################################################################
+#
+#    Odoo, Open Source Management Solution
+#    Copyright (c) 2019 Waell Ahmed (http://www.genericdev.com) info &lt;waell.alameldeen@gmail.com&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+
+from odoo import models, fields, api,  _
+
+import logging
+_logger = logging.getLogger(__name__)
+
+
+class ${ModelName}(models.Model):
+    _name = '${1}'
+    _description = '${2}'
+    _auto = False
+
+    ${0}
+
+    def init(self, cr):
+        tools.drop_view_if_exists('${1}')
+        cr.execute("""
+            CREATE OR REPLACE VIEW ${1} AS (
+                SELECT
+                    
+                FROM
+                    
+                JOIN
+                    
+                GROUP BY
+                    
+            )
+        """)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Report View" enabled="true" name="o_report_view_2"># -*- coding: utf-8 -*-
+##############################################################################
+#
+#    Odoo, Open Source Management Solution
+#    Copyright (c) 2019 Waell Ahmed (http://www.genericdev.com) info &lt;waell.alameldeen@gmail.com&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+
+from odoo import api, fields, models, _
+from odoo import tools
+${1}
+
+########## ########## ########## ########## ##########
+# ${Description}
+########## ########## ########## ########## ##########
+class ${Class}(models.Model):
+    _name = "${ObjectName}"
+    _auto = False
+    _description = "${Description}"
+    _rec_name = ""
+    _order = ""
+    _table = ""
+
+    name = fields.Char(string="${Label}")
+    field = fields.Char(string='${Label}', readonly=True)
+    ${field}_id = fields.Many2one('${RelatedClassName}', string='${Label}', readonly=True)
+
+    def init(self, cr):
+        tools.drop_view_if_exists(cr, "${TableName}")
+        cr.execute("""
+            CREATE OR REPLACE VIEW ${13:TableName} AS (
+            SELECT 
+                row_number() over(order by name) AS id,
+                name,
+             ${field},
+             ${m2ofield}
+            FROM
+                
+            WHERE
+                 
+        )""")
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Return Action" enabled="true" name="o_return_action">return {
+    'type': 'ir.actions.act_window',
+    'name': '${Name}',
+    'view_mode': 'form',
+    'view_type': 'form',
+    'res_id': ${record_id},
+    'res_model': ${model_name},
+    'view_id': ${view_id},
+    'target': 'current|new',
+}
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Route Method" enabled="true" name="o_route">@http.route(['/web/path'], auth="public", website=True)
+def ${example}(self, **post):
+    return request.website.render('module_name.template_name')
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Search" enabled="true" name="o_search">${self}.search([('${field}', '=', ${13})],
+    offset = ${int},
+    limit = ${int},
+    order = '${field}',
+)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Search Count" enabled="true" name="o_search_count">${self}.search_count([
+    ('${field}', '=', ${13}),
+])
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Search Method" enabled="true" name="o_search_method">def search(self, args, offset=0, limit=None, order=None, count=False):
+    ${1}
+    res = super(${Class}, self).search(args, offset=offset, limit=limit, order=order, count=count)
+    ${2}
+    return res
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Sorted" enabled="true" name="o_sorted">${self}.sorted(key = function, reverse=True)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo strftime" enabled="true" name="o_strftime">strftime('%Y-%m-%d %H:%M:%S')
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Super" enabled="true" name="o_super">super(${Class}, self).${Method}(${3})
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AddTypeEqualityFunc" enabled="true" name="o_test_add_type_equality_func">addTypeEqualityFunc(${typeobj}, ${function})
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertAlmostEqual" enabled="true" name="o_test_assert_almost_equal">assertAlmostEqual(${first}, ${second}, places=7, msg=None, delta=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertDictContainsSubset" enabled="true" name="o_test_assert_dict_contains_subset">assertDictContainsSubset(expected, actual, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertDictEqual" enabled="true" name="o_test_assert_dict_equal">assertDictEqual(expected, actual, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertEqual" enabled="true" name="o_test_assert_equal">assertEqual(first, second, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertFalse" enabled="true" name="o_test_assert_false">assertFalse(expr, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertGreater" enabled="true" name="o_test_assert_greater">assertGreater(first, second, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertGreaterEqual" enabled="true" name="o_test_assert_greater_equal">assertGreaterEqual(first, second, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="" enabled="true" name="o_test_assert_in">assertIn(first, second, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertIs" enabled="true" name="o_test_assert_is">assertIs(first, second, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertIsInstance" enabled="true" name="o_test_assert_is_instance">assertIsInstance(obj, cls, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertIsNone" enabled="true" name="o_test_assert_is_none">assertIsNone(expr, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertIsNot" enabled="true" name="o_test_assert_is_not">assertIsNot(first, second, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertIsNotNone" enabled="true" name="o_test_assert_is_not_none">assertIsNotNone(expr, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertItemsEqual" enabled="true" name="o_test_assert_items_equal">assertItemsEqual(actual, expected, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertLess" enabled="true" name="o_test_assert_less">assertLess(first, second, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertLessEqual" enabled="true" name="o_test_assert_less_equal">assertLessEqual(first, second, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertListEqual" enabled="true" name="o_test_assert_list_equal">assertListEqual(list1, list2, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertMultiLineEqual" enabled="true" name="o_test_assert_multi_line_equal">assertMultiLineEqual(first, second, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertNotAlmostEqual" enabled="true" name="o_test_assert_not_almost_equal">assertNotAlmostEqual(first, second, places=7, msg=None, delta=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertNotEqual" enabled="true" name="o_test_assert_not_equal">assertNotEqual(first, second, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertNotIn" enabled="true" name="o_test_assert_not_in">assertNotIn(first, second, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertNotIsInstance" enabled="true" name="o_test_assert_not_in_instance">assertNotIsInstance(obj, cls, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertRaises" enabled="true" name="o_test_assert_raises">assertRaises(${exception})
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertRaisesExtended" enabled="true" name="o_test_assert_raises_extended">assertRaises(exception, callable, *args, **kwds)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertRaisesRegexp" enabled="true" name="o_test_assert_raises_regexp">assertRaisesRegexp(${exception}, ${regexp}))
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertRaisesRegexpExtended" enabled="true" name="o_test_assert_raises_regexp_extended">assertRaisesRegexp(${exception}, ${regexp}, ${callable}, ${args}, ${kwds})
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertRaisesRegexpMatches" enabled="true" name="o_test_assert_raises_regexp_matches">assertRegexpMatches(${text}, ${regexp}, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertRaisesSequenceEqual" enabled="true" name="o_test_assert_raises_sequence_equal">assertSequenceEqual(${seq1}, ${seq2}, msg=None, seq_type=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertSetEqual" enabled="true" name="o_test_assert_set_equal">assertSetEqual(${set1}, ${set2},  msg=None)
+${curssor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertTrue" enabled="true" name="o_test_assert_true">assertTrue(${expr}, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertTupleEqual" enabled="true" name="o_test_assert_tuple_equal">assertTupleEqual(${tuple1}, ${tuple2}, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test Fail" enabled="true" name="o_test_fail">fail(msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test Method" enabled="true" name="o_test_method">def test_${item_name}(self):
+    """ Checks if the ${1} works properly
+    """
+
+    ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test TransactitonCase" enabled="true" name="o_test_transactiton_case">from odoo.tests.common import TransactionCase
+
+
+class ${ModelName}(TransactionCase):
+    """ This class contains the unit tests for
+
+        Tests:
+          - ${3}: Checks if the ${3} works properly
+    """
+
+    def setUp(self):
+        super(${1}, self).setUp()
+
+    def test_${item_name}(self):
+        """ Checks if the ${3} works properly """
+
+        ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Unlink Method" enabled="true" name="o_unlink_method">def unlink(self):
+    ${1}
+    res = super(${Class}, self).unlink()
+    ${2}
+    return res
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo View Header Get" enabled="true" name="o_view_header_get">@api.model
+def view_header_get(self, view_id=None, view_type='form'):
+    """ Returns the window title which depends on the context """
+
+    return False
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo View Init" enabled="true" name="o_view_init">@api.model
+def view_init(self, fields_list):
+    """ Does specific things when a view on the object is opened """
+
+    ${pass}
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Wizard Action" enabled="true" name="o_wizard_action">@api.multi
+def action_wizard(self):
+    context = dict(self._context or {})
+    return {
+      'type': 'ir.actions.act_window',
+      'name': _("${wizard_name}"),
+      'res_model': "${model}",
+      'view_type': 'form',
+      'view_mode': 'form',
+      'target': 'new',
+      'context': {${context}}
+    }
+
+@api.multi
+def ${action_button}(self):
+	context = dict(self._context or {})
+	active_model = context.get('active_model', False)
+	active_ids = context.get('active_ids', []) or []
+	records = self.env[active_model].browse(active_ids)
+	return self._${action_button}(records)
+
+@api.multi
+def _${action_button}(self, records):
+	for rec in self:
+		for record in records:
+			rec._${function}(record)
+
+	menues = self.env['ir.model.data'].get_object_reference('${module}', '${menu}')
+	menu = menues[1] if len(menues) &gt; 0 else False
+	return {
+		'type': 'ir.actions.client',
+		'tag': 'reload',
+		'params': {'menu_id': menu},
+	}
+
+@api.multi
+def _${function}(self, record):
+    if state == '${value}':
+        raise UserError(_('${message}'))
+    return record.write({'${field}': False})
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Wizard Class" enabled="true" name="o_wizard_class"># -*- coding: utf-8 -*-
+##############################################################################
+#
+#    Odoo, Open Source Management Solution
+#    Copyright (c) 2019 Waell Ahmed (http://www.genericdev.com) info &lt;waell.alameldeen@gmail.com&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+
+from odoo import api, fields, models, _
+${1}
+
+########## ########## ########## ########## ##########
+# ${Description}
+########## ########## ########## ########## ##########
+class ${Class}(models.TransientModel):
+    _name = "${ObjectName}"
+    _description = "${Description}"
+    _register = False
+
+    name = fields.Char(string="${Label}", required=True)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Write Method" enabled="true" name="o_write_method">@api.multi
+def write(self, values):
+    for rec in self:
+        if values.get('${field}'):
+            values["${result}"] = "${value}"
+        return super(${ClassName}, self).write(values)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo XML ID" enabled="true" name="o_xml_id">${example}_id = self.env.ref("${ModuleObject_id}").id
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Odoo Test AssertNotRegexpMatches" enabled="true" name="odoo_test_assert_not_regexp_matches">assertNotRegexpMatches(text, regexp, msg=None)
+${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="pass keyword" enabled="true" id="org.python.pydev.editor.templates.python.pass" name="pass">pass${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="pdb" enabled="true" id="org.python.pydev.editor.templates.python.pdb" name="pd">import pdb;pdb.set_trace()</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="print (considers python 2 or 3)" enabled="true" id="org.python.pydev.editor.templates.python.print" name="print">print${space_if_py2}${lparen_if_py3}${cursor}${rparen_if_py3}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="print '\n'.join(sorted(dir(value)))" enabled="true" id="org.python.pydev.editor.templates.python.printdir" name="printdir">print${space_if_py2}${lparen_if_py3}'\n'.join(sorted(dir(${cursor})))${rparen_if_py3}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="print current traceback" enabled="true" id="org.python.pydev.editor.templates.python.printexc" name="printexc">import traceback;traceback.print_exc()${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="property creation from inner methods" enabled="true" id="org.python.pydev.editor.templates.python.property_inner" name="property_inner">def ${prop}(): #@NoSelf
+    doc = """${Docstring}""" #@UnusedVariable
+
+    def fget(self):
+        return self._${prop}
+
+    def fset(self, value):
+        self._${prop} = value
+
+    def fdel(self):
+        del self._${prop}
+
+    return locals()
+
+${prop} = property(**${prop}())${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="pydevd.settrace()" enabled="true" id="org.python.pydev.editor.templates.python.pydevd" name="pydevd">import sys;sys.path.append(r'${pydevd_dir_location}')
+import pydevd;pydevd.settrace()</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="pydevd.patch_django_autoreload()" enabled="true" id="org.python.pydev.editor.templates.python.pydevd_patch_django_auto_reload" name="pydevd_patch_django_auto_reload">import sys;sys.path.append(r'${pydevd_dir_location}')
+import pydevd;pydevd.patch_django_autoreload(patch_remote_debugger=True, patch_show_console=True)</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="raise" enabled="true" id="org.python.pydev.editor.templates.python.raise" name="raise">raise ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="raise RuntimeError('desc')" enabled="true" id="org.python.pydev.editor.templates.python.raiseruntimeerror" name="raiseruntimeerror">raise RuntimeError('${desc}')${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="return keyword" enabled="true" id="org.python.pydev.editor.templates.python.return" name="return">return ${cursor}</template><template autoinsert="false" context="org.python.pydev.editor.templates.python" deleted="false" description="Call super(current_class, self).current_method()" enabled="true" id="org.python.pydev.editor.templates.python.super" name="super">super(${current_class}, self).${current_method}(${cursor})</template><template autoinsert="false" context="org.python.pydev.editor.templates.python" deleted="false" description="Call superclass.current_method(self)" enabled="true" id="org.python.pydev.editor.templates.python.super_raw" name="super_raw">${superclass}.${current_method}(self${cursor})</template><template autoinsert="false" context="org.python.pydev.editor.templates.python" deleted="false" description="Complete test-case module with pyunit" enabled="true" id="org.python.pydev.editor.templates.python.testCase" name="testCase">import unittest
+
+class ${TestCase}(unittest.TestCase):
+
+    def setUp(self):
+        unittest.TestCase.setUp(self)
+
+    def tearDown(self):
+        unittest.TestCase.tearDown(self)
+
+    def test${Met1}(self):
+        ${pass}${cursor}
+
+if __name__ == '__main__':
+    unittest.main()</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="while keyword" enabled="true" id="org.python.pydev.editor.templates.python.while" name="while">while ${cursor}:</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="yield keyword" enabled="true" id="org.python.pydev.editor.templates.python.yield" name="yield">yield ${cursor}</template></templates>
